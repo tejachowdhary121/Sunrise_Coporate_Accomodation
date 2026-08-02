@@ -1,0 +1,880 @@
+/*=========================================================
+                    GOOGLE FONTS
+=========================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap');
+
+/*=========================================================
+                    GLOBAL STYLES
+=========================================================*/
+
+body{
+
+    margin:0;
+    padding:0;
+
+    background:#0d0d0d;
+
+    color:#ffffff;
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+.menu-section{
+
+    min-height:100vh;
+
+    padding:140px 0 80px;
+
+    background:#101010;
+
+    position:relative;
+
+}
+
+.menu-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(212,175,55,.08),
+    transparent 35%);
+
+    pointer-events:none;
+
+}
+
+/*=========================================================
+                    HERO CONTENT
+=========================================================*/
+
+.menu-header-content{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.menu-subtitle{
+
+    color:var(--primary);
+
+    text-transform:uppercase;
+
+    letter-spacing:7px;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    margin-bottom:18px;
+
+}
+
+.menu-title{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:72px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+
+}
+
+.menu-title span{
+
+    color:var(--primary);
+
+    font-style:italic;
+
+}
+
+.menu-description{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#bdbdbd;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+/*=========================================================
+                    GOLD DIVIDER
+=========================================================*/
+
+.gold-divider{
+
+    width:90px;
+
+    height:4px;
+
+    margin:28px auto;
+
+    background:var(--primary);
+
+    border-radius:50px;
+
+}
+
+/*=========================================================
+                    DAY BUTTONS
+=========================================================*/
+
+.day-tabs{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-top:60px;
+
+    margin-bottom:60px;
+
+}
+
+.day-btn{
+
+    background:transparent;
+
+    color:var(--primary);
+
+    border:1px solid rgba(212,175,55,.35);
+
+    padding:14px 32px;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+}
+
+.day-btn:hover{
+
+    background:var(--primary);
+
+    color:#111;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(212,175,55,.25);
+
+}
+
+.day-btn.active{
+
+    background:var(--primary);
+
+    color:#111;
+
+    box-shadow:0 12px 25px rgba(212,175,55,.28);
+
+}
+
+/*=========================================================
+                    MENU CARD
+=========================================================*/
+
+.menu-card{
+
+    background:#171717;
+
+    border:1px solid rgba(212,175,55,.12);
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.40);
+
+    transition:.35s;
+
+}
+
+.menu-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 30px 60px rgba(0,0,0,.45);
+
+}
+
+/*=========================================================
+                    MENU HEADER
+=========================================================*/
+
+.menu-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:28px 40px;
+
+    background:#1f1f1f;
+
+    border-bottom:1px solid rgba(212,175,55,.10);
+
+}
+
+.menu-header h2{
+
+    margin:0;
+
+    font-size:46px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#ffffff;
+
+}
+
+.special-day{
+
+    color:var(--primary);
+
+    font-size:18px;
+
+    font-style:italic;
+
+    font-weight:500;
+
+}
+
+/*=========================================================
+                    MEAL ITEMS
+=========================================================*/
+
+.meal-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+    padding:28px 38px;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    transition:.35s;
+
+}
+
+.meal-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.meal-item:hover{
+
+    background:#202020;
+
+}
+
+.meal-icon{
+
+    width:68px;
+
+    height:68px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#252525;
+
+    color:var(--primary);
+
+    font-size:30px;
+
+    flex-shrink:0;
+
+    transition:.35s;
+
+}
+
+.meal-item:hover .meal-icon{
+
+    background:var(--primary);
+
+    color:#111;
+
+    transform:rotate(8deg) scale(1.08);
+
+}
+
+.meal-content{
+
+    flex:1;
+
+}
+
+.meal-type{
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.meal-item h5{
+
+    margin:0;
+
+    font-size:20px;
+
+    color:#ffffff;
+
+    line-height:1.8;
+
+    font-weight:500;
+
+}
+
+/*=========================================================
+                    NOTES CARD
+=========================================================*/
+
+.notes-card{
+
+    margin-top:40px;
+
+    background:#171717;
+
+    border:1px solid rgba(212,175,55,.12);
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.notes-header{
+
+    padding:24px 38px;
+
+    background:#1f1f1f;
+
+    border-bottom:1px solid rgba(212,175,55,.10);
+
+    color:var(--primary);
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+}
+
+/*=========================================================
+                    NOTES TABLE
+=========================================================*/
+
+.notes-card table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.notes-card tbody tr{
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    transition:.30s;
+
+}
+
+.notes-card tbody tr:last-child{
+
+    border-bottom:none;
+
+}
+
+.notes-card tbody tr:hover{
+
+    background:#202020;
+
+}
+
+.notes-card th{
+
+    width:220px;
+
+    padding:22px 35px;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    font-size:18px;
+
+    text-align:left;
+
+}
+
+.notes-card td{
+
+    padding:22px 35px;
+
+    color:#f2f2f2;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+/*=========================================================
+                    PREMIUM HOVER EFFECT
+=========================================================*/
+
+.menu-card,
+.notes-card{
+
+    position:relative;
+
+}
+
+.menu-card::before,
+.notes-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:28px;
+
+    padding:1px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(212,175,55,.25),
+        transparent,
+        rgba(212,175,55,.15)
+    );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+
+    pointer-events:none;
+
+}
+
+/*=========================================================
+                    FADE ANIMATION
+=========================================================*/
+
+.fade-menu{
+
+    animation:fadeMenu .45s ease;
+
+}
+
+@keyframes fadeMenu{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================================
+                IMAGE ANIMATION
+=========================================================*/
+
+.meal-icon{
+
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        color .35s ease;
+
+}
+
+/*=========================================================
+                SCROLLBAR
+=========================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#c79c22;
+
+}
+
+/*=========================================================
+                TEXT SELECTION
+=========================================================*/
+
+::selection{
+
+    background:var(--primary);
+
+    color:#111;
+
+}
+
+/*=========================================================
+                TABLE HOVER
+=========================================================*/
+
+.notes-card tbody tr{
+
+    transition:.35s;
+
+}
+
+.notes-card tbody tr:hover{
+
+    transform:translateX(5px);
+
+}
+
+/*=========================================================
+                DAY BUTTON ANIMATION
+=========================================================*/
+
+.day-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.day-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.18),
+        transparent
+    );
+
+    transition:.55s;
+
+}
+
+.day-btn:hover::before{
+
+    left:120%;
+
+}
+
+/*=========================================================
+                RESPONSIVE
+=========================================================*/
+
+@media(max-width:1200px){
+
+    .menu-title{
+
+        font-size:60px;
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    .menu-section{
+
+        padding:130px 0 70px;
+
+    }
+
+    .menu-title{
+
+        font-size:52px;
+
+    }
+
+    .menu-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+
+    }
+
+    .notes-card{
+
+        margin-top:35px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .menu-title{
+
+        font-size:42px;
+
+    }
+
+    .menu-description{
+
+        font-size:16px;
+
+    }
+
+    .day-tabs{
+
+        gap:12px;
+
+    }
+
+    .day-btn{
+
+        width:48%;
+
+        padding:12px;
+
+    }
+
+    .meal-item{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .meal-icon{
+
+        margin-bottom:12px;
+
+    }
+
+    .meal-item h5{
+
+        font-size:18px;
+
+    }
+
+    .notes-card th{
+
+        width:150px;
+
+        font-size:15px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .menu-section{
+
+        padding:120px 0 60px;
+
+    }
+
+    .menu-title{
+
+        font-size:34px;
+
+    }
+
+    .menu-subtitle{
+
+        letter-spacing:4px;
+
+        font-size:13px;
+
+    }
+
+    .menu-description{
+
+        font-size:15px;
+
+        line-height:1.8;
+
+    }
+
+    .day-btn{
+
+        width:100%;
+
+    }
+
+    .menu-header{
+
+        padding:22px;
+
+    }
+
+    .menu-header h2{
+
+        font-size:34px;
+
+    }
+
+    .meal-item{
+
+        padding:22px;
+
+    }
+
+    .meal-item h5{
+
+        font-size:17px;
+
+        line-height:1.7;
+
+    }
+
+    .notes-card th,
+    .notes-card td{
+
+        display:block;
+
+        width:100%;
+
+        padding:12px 20px;
+
+    }
+
+    .notes-card tr{
+
+        display:block;
+
+        padding:10px 0;
+
+    }
+
+}
+
+/*=========================================================
+                FINAL POLISH
+=========================================================*/
+
+.menu-card,
+.notes-card{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
+}
+
+.menu-card:hover,
+.notes-card:hover{
+
+    border-color:rgba(212,175,55,.25);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.45);
+
+}

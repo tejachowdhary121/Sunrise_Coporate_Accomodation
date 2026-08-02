@@ -1,0 +1,1566 @@
+/*=========================================================
+        SUNRISE CORPORATE ACCOMMODATION
+                GLOBAL STYLES
+=========================================================*/
+
+/*==========================
+        GOOGLE FONTS
+===========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
+
+/*==========================
+        ROOT VARIABLES
+===========================*/
+
+:root{
+
+    --primary:#D4AF37;
+    --primary-light:#f1d87a;
+    --primary-dark:#b89018;
+
+    --black:#0d0d0d;
+    --dark:#171717;
+    --card:#1d1d1d;
+
+    --white:#ffffff;
+    --text:#d6d6d6;
+
+    --border:rgba(212,175,55,.15);
+
+    --shadow:0 20px 45px rgba(0,0,0,.35);
+
+    --transition:.35s ease;
+
+}
+
+
+/*==========================
+            RESET
+===========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--black);
+
+    color:var(--white);
+
+    font-family:'Comfortaa',sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+button{
+
+    border:none;
+
+    outline:none;
+
+}
+
+.container{
+
+    max-width:1320px;
+
+}
+
+
+/*==========================
+        TYPOGRAPHY
+===========================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-weight:700;
+
+    color:white;
+
+    letter-spacing:.5px;
+
+}
+
+p{
+
+    color:var(--text);
+
+    line-height:1.9;
+
+    font-size:16px;
+
+}
+
+.section-subtitle{
+
+    color:var(--primary);
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+}
+
+.section-title{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+}
+
+.section-description{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#cfcfcf;
+
+}
+
+
+/*==========================
+        SECTION SPACING
+===========================*/
+
+section{
+
+    position:relative;
+
+    padding:90px 0;
+
+}
+
+
+/*==========================
+        BUTTONS
+===========================*/
+
+.btn-gold{
+
+    background:var(--primary);
+
+    color:#111;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+}
+
+.btn-gold:hover{
+
+    background:var(--primary-light);
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+        0 15px 35px rgba(212,175,55,.25);
+
+}
+
+.btn-outline{
+
+    border:1px solid white;
+
+    color:white;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    transition:var(--transition);
+
+}
+
+.btn-outline:hover{
+
+    background:white;
+
+    color:black;
+
+}
+
+/*=========================================================
+                HERO OUTLINE BUTTON
+=========================================================*/
+
+.hero-btn-outline{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:300px;
+
+    height:60px;
+
+    border:2px solid #D4AF37;
+
+    border-radius:50px;
+
+    color:#D4AF37;
+
+    background:transparent;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+}
+
+.hero-btn-outline:hover{
+
+    background:#D4AF37;
+
+    color:#111;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(212,175,55,.25);
+
+}
+
+
+/*==========================
+        GLASS EFFECT
+===========================*/
+
+.glass-card{
+
+    position:relative;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(255,255,255,.08),
+
+        rgba(255,255,255,.02)
+
+    );
+
+    border:1px solid rgba(255,255,255,.10);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+}
+
+.glass-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.15),
+
+        transparent
+
+    );
+
+    transform:translateX(-120%);
+
+    animation:glassShine 7s linear infinite;
+
+}
+
+
+/*==========================
+        COMMON CARDS
+===========================*/
+
+.premium-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    transition:var(--transition);
+
+    overflow:hidden;
+
+}
+
+.premium-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--primary);
+
+    box-shadow:
+
+        0 25px 45px rgba(212,175,55,.15);
+
+}
+
+
+/*==========================
+        COMMON ICON
+===========================*/
+
+.icon-circle{
+
+    width:75px;
+
+    height:75px;
+
+    background:#222;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:auto;
+
+    transition:.4s;
+
+}
+
+.icon-circle i{
+
+    color:var(--primary);
+
+    font-size:30px;
+
+}
+
+.premium-card:hover .icon-circle{
+
+    transform:rotate(10deg) scale(1.08);
+
+}
+
+
+/*==========================
+        GOLD LINE
+===========================*/
+
+.gold-line{
+
+    width:90px;
+
+    height:4px;
+
+    background:var(--primary);
+
+    margin-top:18px;
+
+    border-radius:30px;
+
+}
+
+
+/*==========================
+        SHADOW
+===========================*/
+
+.shadow-premium{
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/*==========================
+        TEXT COLORS
+===========================*/
+
+.text-gold{
+
+    color:var(--primary);
+
+}
+
+.text-light{
+
+    color:var(--text);
+
+}
+
+
+/*==========================
+        BACKGROUNDS
+===========================*/
+
+.bg-dark{
+
+    background:#101010;
+
+}
+
+.bg-card{
+
+    background:#171717;
+
+}
+
+
+/*==========================
+        ANIMATIONS
+===========================*/
+
+@keyframes floatImage{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+}
+
+@keyframes glassShine{
+
+    100%{
+
+        transform:translateX(120%);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.fade-up{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+
+/*==========================
+        SCROLLBAR
+===========================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-light);
+
+}
+
+/*=========================================================
+                    PREMIUM NAVBAR
+=========================================================*/
+
+.navbar{
+
+    background:rgba(12,12,12,.90);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    backdrop-filter:blur(18px);
+
+    padding:4px 0;
+
+    transition:all .35s ease;
+
+    z-index:1050;
+
+    border-bottom:1px solid rgba(212,175,55,.12);
+
+}
+
+.navbar{
+
+    min-height:75px;
+
+}
+
+.navbar.scrolled{
+
+    background:#0d0d0d;
+
+    padding:2px 0;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.45);
+
+}
+
+.navbar .container{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+/*=========================================================
+                    LOGO
+=========================================================*/
+
+.navbar-brand{
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0;
+
+}
+
+.navbar-brand img{
+
+    width:320px;
+
+    height:auto;
+
+    display:block;
+
+    transition:all .35s ease;
+
+    filter:brightness(1.05) contrast(1.05);
+
+}
+
+.navbar-brand:hover img{
+
+    transform:scale(1.03);
+
+}
+
+/*=========================================================
+                    NAV LINKS
+=========================================================*/
+
+.navbar-nav{
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.nav-link{
+
+    position:relative;
+
+    color:#ffffff !important;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    letter-spacing:.3px;
+
+    padding:8px 16px !important;
+
+    transition:all .3s ease;
+
+}
+
+.nav-link:hover{
+
+    color:var(--primary) !important;
+
+}
+
+.nav-link.active{
+
+    color:var(--primary) !important;
+
+}
+
+/* Underline Animation (Changed from ::after to ::before) */
+
+.nav-link::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:2px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transform:translateX(-50%);
+
+    transition:width .35s ease;
+
+}
+
+.nav-link:hover::before,
+
+.nav-link.active::before{
+
+    width:70%;
+
+}
+
+/*=========================================================
+                    DROPDOWN
+=========================================================*/
+
+/* Keep the text and arrow on the same line */
+.navbar .dropdown-toggle{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+}
+
+/* Custom Arrow */
+.navbar .dropdown-toggle::after{
+
+    margin-left:8px;
+
+    vertical-align:.15em;
+
+    border-top:.35em solid var(--primary);
+
+    border-right:.35em solid transparent;
+
+    border-left:.35em solid transparent;
+
+    border-bottom:0;
+
+    transition: transform .3s ease;
+
+}
+
+/* Rotate arrow when dropdown is open */
+.navbar .dropdown-toggle[aria-expanded="true"]::after{
+
+    transform: rotate(180deg);
+
+}
+
+/* Dropdown Menu */
+.dropdown-menu{
+
+    background:#181818;
+
+    border:1px solid rgba(212,175,55,.15);
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    padding:10px 0;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+/* Dropdown Items */
+.dropdown-item{
+
+    color:#ffffff;
+
+    padding:12px 20px;
+
+    transition:.3s;
+
+}
+
+.dropdown-item:hover{
+
+    background:rgba(212,175,55,.10);
+
+    color:var(--primary);
+
+    padding-left:28px;
+
+}
+
+/*=========================================================
+                    NAV BUTTON
+=========================================================*/
+
+.nav-book-btn{
+
+    background:var(--primary);
+
+    color:#111;
+
+    padding:12px 28px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:all .35s ease;
+
+}
+
+.nav-book-btn:hover{
+
+    background:#e5bf50;
+
+    color:#111;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(212,175,55,.35);
+
+}
+
+/*=========================================================
+                    MOBILE NAVBAR
+=========================================================*/
+
+.navbar-toggler{
+
+    border:none;
+
+    box-shadow:none !important;
+
+}
+
+.navbar-toggler:focus{
+
+    box-shadow:none;
+
+}
+
+.navbar-toggler i{
+
+    color:var(--primary);
+
+    font-size:28px;
+
+}
+
+@media(max-width:991px){
+
+    .navbar{
+
+        padding:15px 0;
+
+    }
+
+    .navbar-brand img{
+
+        width:250px;
+
+        height:auto;
+
+        display:block;
+
+        transition:.35s;
+
+    }
+
+    .navbar-collapse{
+
+        background:#111;
+
+        margin-top:15px;
+
+        padding:18px;
+
+        border-radius:16px;
+
+        border:1px solid rgba(212,175,55,.10);
+
+    }
+
+    .navbar-nav{
+
+        gap:5px;
+
+    }
+
+    .navbar-nav .nav-link{
+
+        padding:12px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .navbar-brand img{
+
+        width:180px;
+
+    }
+
+}
+
+
+
+/*=========================================================
+                    COMMON IMAGE
+=========================================================*/
+
+.image-radius{
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+}
+
+.image-radius img{
+
+    transition:.45s;
+
+}
+
+.image-radius:hover img{
+
+    transform:scale(1.06);
+
+}
+
+
+
+/*=========================================================
+                    COMMON GRID
+=========================================================*/
+
+.grid-gap{
+
+    row-gap:30px;
+
+}
+
+.section-center{
+
+    max-width:720px;
+
+    margin:auto;
+
+}
+
+
+
+/*=========================================================
+                    GOLD DIVIDER
+=========================================================*/
+
+.divider{
+
+    width:100px;
+
+    height:4px;
+
+    background:var(--primary);
+
+    margin:20px auto;
+
+    border-radius:50px;
+
+}
+
+
+
+/*=========================================================
+                    PREMIUM FOOTER
+=========================================================*/
+
+.premium-footer{
+
+    background:#080808;
+
+    padding:80px 0 30px;
+
+    border-top:1px solid rgba(212,175,55,.15);
+
+}
+
+.footer-logo{
+
+    width:390px;
+
+    max-width:100%;
+
+    margin-bottom:25px;
+
+}
+
+.footer-title{
+
+    color:var(--primary);
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:30px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+.footer-text{
+
+    color:#cfcfcf;
+
+    line-height:2;
+
+    font-size:16px;
+
+    margin-bottom:0;
+
+}
+
+.footer-links{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.footer-links li{
+
+    margin-bottom:14px;
+
+}
+
+.footer-links a{
+
+    color:#d2d2d2;
+
+    text-decoration:none;
+
+    transition:all .35s ease;
+
+}
+
+.footer-links a:hover{
+
+    color:var(--primary);
+
+    padding-left:8px;
+
+}
+
+.footer-contact{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.footer-contact li{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    color:#d2d2d2;
+
+    margin-bottom:18px;
+
+    line-height:1.8;
+
+}
+
+.footer-contact i{
+
+    color:var(--primary);
+
+    font-size:18px;
+
+    margin-top:4px;
+
+    min-width:20px;
+
+}
+
+.footer-social{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.footer-social a{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#1b1b1b;
+
+    border:1px solid rgba(212,175,55,.15);
+
+    color:var(--primary);
+
+    text-decoration:none;
+
+    transition:all .35s ease;
+
+}
+
+.footer-social a:hover{
+
+    background:var(--primary);
+
+    color:#111;
+
+    transform:translateY(-6px);
+
+    box-shadow:0 10px 25px rgba(212,175,55,.35);
+
+}
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    margin-top:50px;
+
+    padding-top:25px;
+
+    text-align:center;
+
+}
+
+.footer-bottom p{
+
+    color:#cfcfcf;
+
+    margin:0;
+
+    font-size:15px;
+
+}
+
+.footer-bottom span{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+/*=========================================
+            DEVELOPER CREDIT
+=========================================*/
+
+.developer-credit{
+
+    margin-top:12px;
+
+    font-size:15px;
+
+    color:#bdbdbd;
+
+}
+
+.developer-link{
+
+    color:var(--primary) !important;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    margin-left:6px;
+
+    transition:all .3s ease;
+
+}
+
+.developer-link:link,
+.developer-link:visited{
+
+    color:var(--primary) !important;
+
+}
+
+.developer-link:hover{
+
+    color:#f4d35e !important;
+
+}
+
+.developer-link:active{
+
+    color:#FFD54F !important;
+
+}
+
+.developer-link i{
+
+    margin-right:6px;
+
+    color:inherit;
+
+    font-size:16px;
+
+}
+
+/* ==========================
+   Floating WhatsApp Button
+========================== */
+
+.whatsapp-float{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 65px;
+    height: 65px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+    z-index: 9999;
+    transition: all .3s ease;
+    animation: whatsappPulse 2s infinite;
+}
+
+.whatsapp-float:hover{
+    background: #20ba5a;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+@keyframes whatsappPulse{
+    0%{
+        box-shadow: 0 0 0 0 rgba(37,211,102,.5);
+    }
+    70%{
+        box-shadow: 0 0 0 18px rgba(37,211,102,0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(37,211,102,0);
+    }
+}
+
+@media (max-width:768px){
+    .whatsapp-float{
+        width:58px;
+        height:58px;
+        font-size:30px;
+        bottom:18px;
+        right:18px;
+    }
+}
+
+.whatsapp-float{
+
+    animation: whatsappPulse 2s infinite;
+
+}
+
+@keyframes whatsappPulse{
+
+0%{
+
+box-shadow:0 0 0 0 rgba(37,211,102,.5);
+
+}
+
+70%{
+
+box-shadow:0 0 0 18px rgba(37,211,102,0);
+
+}
+
+100%{
+
+box-shadow:0 0 0 0 rgba(37,211,102,0);
+
+}
+
+}
+
+/*=========================================================
+                    RESPONSIVE
+=========================================================*/
+
+@media(max-width:991px){
+
+    .premium-footer{
+
+        text-align:center;
+
+    }
+
+    .footer-logo{
+
+        margin:auto auto 25px;
+
+    }
+
+    .footer-contact li{
+
+        justify-content:center;
+
+    }
+
+    .footer-social{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:767px){
+
+    .premium-footer{
+
+        padding:60px 0 25px;
+
+    }
+
+    .footer-title{
+
+        margin-top:30px;
+
+        font-size:26px;
+
+    }
+
+    .footer-logo{
+
+        width:180px;
+
+    }
+
+}
+
+
+
+/*=========================================================
+                    UTILITIES
+=========================================================*/
+
+.rounded-20{
+
+    border-radius:20px;
+
+}
+
+.rounded-30{
+
+    border-radius:30px;
+
+}
+
+.transition{
+
+    transition:.35s;
+
+}
+
+.hover-up:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.cursor{
+
+    cursor:pointer;
+
+}
+
+.w-fit{
+
+    width:fit-content;
+
+}
+
+.mx-auto{
+
+    margin:auto;
+
+}
+
+
+
+/*=========================================================
+                MOBILE NAVBAR
+=========================================================*/
+
+.navbar-toggler{
+
+    border:none;
+
+    box-shadow:none !important;
+
+}
+
+.navbar-toggler-icon{
+
+    filter:invert(1);
+
+}
+
+
+
+/*=========================================================
+                RESPONSIVE
+=========================================================*/
+
+@media(max-width:1200px){
+
+.section-title{
+
+font-size:42px;
+
+}
+
+}
+
+@media(max-width:992px){
+
+section{
+
+padding:75px 0;
+
+}
+
+.section-title{
+
+font-size:38px;
+
+}
+
+.navbar-nav{
+
+margin-top:25px;
+
+text-align:center;
+
+gap:5px;
+
+}
+
+.nav-book-btn{
+
+margin-top:15px;
+
+display:inline-block;
+
+}
+
+}
+
+@media(max-width:768px){
+
+section{
+
+padding:60px 0;
+
+}
+
+.section-title{
+
+font-size:32px;
+
+}
+
+.section-subtitle{
+
+font-size:13px;
+
+letter-spacing:4px;
+
+}
+
+.btn-gold,
+
+.btn-outline{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.footer-social{
+
+justify-content:center;
+
+}
+
+.footer-title{
+
+margin-top:30px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.section-title{
+
+font-size:28px;
+
+}
+
+.navbar-brand img{
+
+height:55px;
+
+}
+
+}

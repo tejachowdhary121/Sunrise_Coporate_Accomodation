@@ -1,0 +1,1768 @@
+/*=====================================================
+            SUNRISE ABOUT PAGE
+            Premium About CSS
+======================================================*/
+
+
+/*=====================================================
+                GLOBAL STYLES
+======================================================*/
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Comfortaa',sans-serif;
+    background:#0d0d0d;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+section{
+    padding:90px 0;
+    position:relative;
+}
+
+.container{
+    max-width:1320px;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+p{
+    color:#d7d7d7;
+    line-height:1.9;
+    font-size:16px;
+}
+
+.section-subtitle{
+
+    color:#D4AF37;
+
+    text-transform:uppercase;
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+}
+
+.section-title{
+
+    color:white;
+
+    font-size:46px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.gold-text{
+
+    color:#D4AF37;
+
+}
+
+
+
+/*=====================================================
+                SECTION BACKGROUNDS
+======================================================*/
+
+.about-hero,
+.mission-section,
+.why-sunrise,
+.facility-grid,
+.reviews-section,
+.map-section{
+
+    background:#171717;
+
+}
+
+.about-story,
+.journey-section,
+.values-section,
+.stats-section,
+.nearby-section,
+.contact-section{
+
+    background:#101010;
+
+}
+
+
+
+/*=====================================================
+                HERO SECTION
+======================================================*/
+
+.about-hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+    linear-gradient(
+        rgba(9,9,9,.78),
+        rgba(9,9,9,.88)
+    ),
+    url("../img/images (1).jpeg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+
+
+/* decorative glow */
+
+.about-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:550px;
+
+    height:550px;
+
+    background:rgba(212,175,55,.08);
+
+    filter:blur(120px);
+
+    right:-180px;
+
+    top:-120px;
+
+}
+
+.about-hero .container{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+
+
+/*=====================================================
+                HERO TEXT
+======================================================*/
+
+.about-title{
+
+    font-size:5rem;
+
+    font-weight:700;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+.about-title span{
+
+    color:#D4AF37;
+
+}
+
+.about-description{
+
+    color:#d3d3d3;
+
+    font-size:18px;
+
+    line-height:2;
+
+    margin-bottom:40px;
+
+    max-width:650px;
+
+}
+
+
+
+/*=====================================================
+                HERO BUTTONS
+======================================================*/
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:45px;
+
+}
+
+.hero-buttons .btn{
+
+    padding:14px 35px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+.hero-buttons .btn-warning{
+
+    background:#D4AF37;
+
+    color:black;
+
+    border:none;
+
+}
+
+.hero-buttons .btn-warning:hover{
+
+    background:#c39c20;
+
+    transform:translateY(-5px);
+
+}
+
+.hero-buttons .btn-outline-light{
+
+    border:1px solid #ffffff;
+
+}
+
+.hero-buttons .btn-outline-light:hover{
+
+    background:#ffffff;
+
+    color:black;
+
+}
+
+
+
+/*=====================================================
+                GLASS IMAGE
+======================================================*/
+
+.glass-image-box{
+
+    position:relative;
+
+    display:inline-block;
+
+    padding:18px;
+
+    border-radius:35px;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(255,255,255,.12),
+
+        rgba(255,255,255,.03)
+
+    );
+
+    border:1px solid rgba(255,255,255,.15);
+
+    -webkit-backdrop-filter:blur(20px);
+    
+    backdrop-filter:blur(20px);
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 35px 65px rgba(0,0,0,.55),
+
+    0 0 35px rgba(212,175,55,.18);
+
+    animation:floatImage 5s ease-in-out infinite;
+
+}
+
+
+
+/* Glass shine */
+
+.glass-image-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.18),
+
+        transparent
+
+    );
+
+    transform:translateX(-120%);
+
+    animation:glassShine 6s linear infinite;
+
+}
+
+
+
+.about-image{
+
+    border-radius:25px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+/*=====================================================
+                HERO BADGES
+======================================================*/
+
+.hero-badges{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:45px;
+
+}
+
+
+
+.badge-box{
+
+    background:#181818;
+
+    border:1px solid rgba(212,175,55,.15);
+
+    border-radius:18px;
+
+    padding:18px 22px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    transition:.35s;
+
+}
+
+.badge-box:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#D4AF37;
+
+}
+
+.badge-box i{
+
+    color:#D4AF37;
+
+    font-size:28px;
+
+}
+
+.badge-box span{
+
+    color:white;
+
+    font-weight:500;
+
+}
+
+
+
+/*=====================================================
+                STORY SECTION
+======================================================*/
+
+.about-story{
+
+    position:relative;
+
+}
+
+.story-image{
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.45);
+
+}
+
+.story-image img{
+
+    transition:.5s;
+
+}
+
+.story-image:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.story-content{
+
+    padding-left:30px;
+
+}
+
+.story-content h2{
+
+    color:white;
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+}
+
+.story-content p{
+
+    margin-bottom:20px;
+
+}
+
+.story-features{
+
+    margin-top:35px;
+
+}
+
+.story-feature{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.story-feature i{
+
+    color:#D4AF37;
+
+    font-size:24px;
+
+    margin-right:15px;
+
+}
+
+.story-feature span{
+
+    color:white;
+
+    font-weight:500;
+
+}
+
+/*=====================================================
+                MISSION & VISION
+======================================================*/
+
+.mission-section{
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-section::before{
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background: rgba(212,175,55,.05);
+    border-radius: 50%;
+    filter: blur(120px);
+    left: -180px;
+    top: -120px;
+}
+
+.mission-card{
+    position: relative;
+    background: #1b1b1b;
+    border: 1px solid rgba(212,175,55,.12);
+    border-radius: 22px;
+    padding: 45px 35px;
+    text-align: center;
+    height: 100%;
+    transition: .4s;
+    overflow: hidden;
+}
+
+.mission-card::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background: #D4AF37;
+    transform: scaleX(0);
+    transition: .4s;
+}
+
+.mission-card:hover::before{
+    transform: scaleX(1);
+}
+
+.mission-card:hover{
+    transform: translateY(-12px);
+    border-color: #D4AF37;
+    box-shadow: 0 25px 45px rgba(212,175,55,.15);
+}
+
+.mission-card i{
+    font-size: 60px;
+    color: #D4AF37;
+    margin-bottom: 25px;
+}
+
+.mission-card h4{
+    color: #fff;
+    margin-bottom: 18px;
+    font-size: 24px;
+}
+
+.mission-card p{
+    margin-bottom: 0;
+}
+
+
+/*=====================================================
+                    JOURNEY
+======================================================*/
+
+.journey-section{
+    position: relative;
+}
+
+.timeline{
+    position: relative;
+    margin-top: 40px;
+    margin-left: 15px;
+    padding-left: 45px;
+    border-left: 3px solid #D4AF37;
+}
+
+.timeline-item{
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.timeline-item:last-child{
+    padding-bottom: 0;
+}
+
+.timeline-item::before{
+    content: "";
+    position: absolute;
+    left: -57px;
+    top: 5px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #D4AF37;
+    border: 5px solid #101010;
+}
+
+.timeline-year{
+    display: inline-block;
+    background: #D4AF37;
+    color: #111;
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.timeline-item h4{
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.timeline-item p{
+    margin-bottom: 0;
+}
+
+
+/*=====================================================
+                WHY CHOOSE SUNRISE
+======================================================*/
+
+.why-sunrise{
+    position: relative;
+}
+
+.choose-card{
+
+    background:#1b1b1b;
+
+    border:1px solid rgba(212,175,55,.12);
+
+    border-radius:22px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    height:100%;
+
+    transition:.35s;
+}
+
+.choose-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#D4AF37;
+
+    box-shadow:0 20px 45px rgba(212,175,55,.18);
+}
+
+.choose-card img{
+
+    width:72px;
+
+    margin:0 auto 25px;
+
+    transition:.4s;
+}
+
+.choose-card:hover img{
+
+    transform:scale(1.08);
+}
+
+.choose-card h4{
+
+    color:#fff;
+
+    margin-bottom:18px;
+
+    font-size:24px;
+}
+
+.choose-card p{
+
+    margin-bottom:0;
+}
+
+/*=========================================
+            PREMIUM INTRO TEXT
+=========================================*/
+
+.premium-intro{
+
+    max-width:900px;
+
+    margin:25px auto 70px;
+
+    text-align:center;
+
+}
+
+.premium-intro p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#cfcfcf;
+
+    font-weight:300;
+
+    letter-spacing:.3px;
+
+    margin:0;
+
+}
+
+/*=====================================================
+                COMMON FACILITIES
+======================================================*/
+
+.facility-grid{
+    position: relative;
+}
+
+.facility-box{
+
+    background:#1b1b1b;
+
+    border-radius:20px;
+
+    border:1px solid rgba(212,175,55,.12);
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    height:100%;
+}
+
+.facility-box:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#D4AF37;
+
+    box-shadow:0 20px 40px rgba(212,175,55,.15);
+}
+
+.facility-box img{
+
+    width:70px;
+
+    margin:0 auto 20px;
+
+    transition:.4s;
+}
+
+.facility-box:hover img{
+
+    transform:rotate(-5deg) scale(1.08);
+}
+
+.facility-box h5{
+
+    color:#fff;
+
+    margin-bottom:12px;
+
+    font-size:20px;
+}
+
+.facility-box p{
+
+    margin-bottom:0;
+
+    font-size:15px;
+}
+
+
+/*=====================================================
+                COMMON CARD EFFECT
+======================================================*/
+
+.card-glow{
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.card-glow::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        130deg,
+
+        transparent,
+
+        rgba(255,255,255,.08),
+
+        transparent
+
+    );
+
+    transform:translateX(-120%);
+
+    transition:1s;
+}
+
+.card-glow:hover::before{
+
+    transform:translateX(120%);
+}
+
+
+/*=====================================================
+            SECTION DECORATION
+======================================================*/
+
+.section-title::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:4px;
+
+    margin-top:15px;
+
+    background:#D4AF37;
+
+    border-radius:20px;
+}
+
+.section-center{
+
+    max-width:700px;
+
+    margin:auto;
+}
+
+.gold-border{
+
+    border:1px solid rgba(212,175,55,.18);
+}
+
+.shadow-premium{
+
+    box-shadow:0 25px 45px rgba(0,0,0,.35);
+}
+
+/*=====================================================
+                    OUR VALUES
+======================================================*/
+
+.values-section{
+    position: relative;
+    overflow: hidden;
+}
+
+.values-section::before{
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(212,175,55,.05);
+    border-radius: 50%;
+    filter: blur(140px);
+    right: -180px;
+    bottom: -150px;
+}
+
+.value-card{
+
+    position: relative;
+
+    background:#1b1b1b;
+
+    border:1px solid rgba(212,175,55,.12);
+
+    border-radius:22px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    height:100%;
+
+    overflow:hidden;
+}
+
+.value-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#D4AF37;
+
+    box-shadow:0 25px 45px rgba(212,175,55,.18);
+}
+
+.value-card i{
+
+    font-size:60px;
+
+    color:#D4AF37;
+
+    margin-bottom:25px;
+
+    transition:.4s;
+}
+
+.value-card:hover i{
+
+    transform:scale(1.1);
+}
+
+.value-card h4{
+
+    color:white;
+
+    margin-bottom:18px;
+
+    font-size:24px;
+}
+
+.value-card p{
+
+    margin-bottom:0;
+}
+
+
+
+/*=====================================================
+                STATISTICS
+======================================================*/
+
+.stats-section{
+    position: relative;
+}
+
+.stat-box{
+
+    text-align:center;
+
+    padding:35px 20px;
+
+    transition:.35s;
+}
+
+.stat-box:hover{
+
+    transform:translateY(-8px);
+}
+
+.stat-box h2{
+
+    font-size:64px;
+
+    color:#D4AF37;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+}
+
+.stat-box h5{
+
+    color:#ffffff;
+
+    margin-bottom:12px;
+
+    font-size:22px;
+}
+
+.stat-box p{
+
+    margin-bottom:0;
+
+    font-size:15px;
+}
+
+
+
+/*=====================================================
+                OVERALL RATING
+======================================================*/
+
+.overall-rating{
+
+    text-align:center;
+
+    margin-bottom:70px;
+}
+
+.rating-stars{
+
+    color:#D4AF37;
+
+    font-size:42px;
+
+    letter-spacing:8px;
+
+    margin-bottom:15px;
+}
+
+.overall-rating h3{
+
+    font-size:64px;
+
+    color:white;
+
+    margin-bottom:15px;
+}
+
+.overall-rating span{
+
+    color:#D4AF37;
+}
+
+.overall-rating p{
+
+    color:#bbbbbb;
+
+    font-size:18px;
+}
+
+
+
+/*=====================================================
+                TESTIMONIALS
+======================================================*/
+
+.reviews-section{
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.review-card{
+
+    position:relative;
+
+    background:#1b1b1b;
+
+    border:1px solid rgba(212,175,55,.12);
+
+    border-radius:22px;
+
+    padding:30px;
+
+    height:300px;
+
+    transition:.35s;
+
+    overflow:hidden;
+}
+
+.review-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#D4AF37;
+
+    box-shadow:0 20px 45px rgba(212,175,55,.18);
+}
+
+.review-content{
+
+    height:220px;
+    overflow:hidden;
+    position:relative;
+
+}
+
+.review-slider{
+
+    position:absolute;
+    width:100%;
+    left:0;
+    top:0;
+
+}
+
+.review-item{
+
+    padding:10px;
+
+}
+
+.review-item .stars{
+
+    color:#FFC107;
+    font-size:20px;
+    letter-spacing:2px;
+    margin-bottom:12px;
+
+}
+
+.review-item p{
+
+    font-size:15px;
+    line-height:1.7;
+    color:#555;
+    margin-bottom:18px;
+
+}
+
+.review-item h5{
+
+    font-weight:600;
+    margin:0;
+}
+
+/* animation */
+
+.slide-up{
+
+    animation:slideUp .7s ease;
+
+}
+
+@keyframes slideUp{
+
+0%{
+
+transform:translateY(100%);
+opacity:0;
+
+}
+
+100%{
+
+transform:translateY(0);
+opacity:1;
+
+}
+
+}
+
+.slide-out{
+
+animation:slideOut .7s ease;
+
+}
+
+@keyframes slideOut{
+
+0%{
+
+transform:translateY(0);
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-100%);
+opacity:0;
+
+}
+
+}
+
+
+
+/*=====================================================
+            REVIEW SHINE EFFECT
+======================================================*/
+
+.review-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        130deg,
+
+        transparent,
+
+        rgba(255,255,255,.08),
+
+        transparent
+
+    );
+
+    transform:translateX(-120%);
+
+    transition:1s;
+}
+
+.review-card:hover::before{
+
+    transform:translateX(120%);
+}
+
+
+
+/*=====================================================
+                REVIEW CONTENT
+======================================================*/
+
+.review-content{
+
+    position:relative;
+
+    z-index:2;
+
+    transition:opacity .8s;
+}
+
+.review-card .stars{
+
+    color:#D4AF37;
+
+    font-size:18px;
+
+    margin-bottom:15px;
+}
+
+.review-card p{
+
+    font-size:15px;
+
+    color:#d8d8d8;
+
+    line-height:1.9;
+
+    min-height:110px;
+}
+
+.review-card h5{
+
+    color:#D4AF37;
+
+    margin-top:25px;
+
+    margin-bottom:4px;
+
+    font-size:20px;
+}
+
+.review-card small{
+
+    color:#aaaaaa;
+
+    font-size:14px;
+}
+
+
+
+/*=====================================================
+            REVIEW AVATAR
+======================================================*/
+
+.review-avatar{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:#D4AF37;
+
+    color:#111;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:26px;
+
+    font-weight:bold;
+
+    margin-bottom:18px;
+}
+
+
+
+/*=====================================================
+        AUTO REVIEW FADE ANIMATION
+======================================================*/
+
+.fade-out{
+
+    opacity:0;
+}
+
+.fade-in{
+
+    opacity:1;
+}
+
+
+
+/*=====================================================
+            REVIEW GRID SPACING
+======================================================*/
+
+.review-grid{
+
+    row-gap:30px;
+}
+
+
+
+/*=====================================================
+        PREMIUM REVIEW DECORATION
+======================================================*/
+
+.review-card::after{
+
+    content:"❝";
+
+    position:absolute;
+
+    right:25px;
+
+    top:15px;
+
+    font-size:70px;
+
+    color:rgba(212,175,55,.08);
+
+    font-family:serif;
+
+    z-index:1;
+}
+
+
+
+/*=====================================================
+        REVIEW BORDER GLOW
+======================================================*/
+
+.review-card:hover{
+
+    box-shadow:
+
+        0 25px 50px rgba(0,0,0,.35),
+
+        0 0 25px rgba(212,175,55,.12);
+}
+
+
+
+/*=====================================================
+        PREMIUM SECTION TITLE
+======================================================*/
+
+.reviews-section .section-title{
+
+    margin-bottom:20px;
+}
+
+.reviews-section .section-subtitle{
+
+    margin-bottom:12px;
+}
+
+/*=====================================================
+                NEARBY PLACES
+======================================================*/
+
+.nearby-section{
+    position:relative;
+    overflow:hidden;
+}
+
+.near-card{
+    background:#1b1b1b;
+    border:1px solid rgba(212,175,55,.12);
+    border-radius:22px;
+    padding:35px 25px;
+    text-align:center;
+    min-height:230px;
+    transition:.35s;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.near-card:hover{
+    transform:translateY(-10px);
+    border-color:#D4AF37;
+    box-shadow:0 20px 45px rgba(212,175,55,.15);
+}
+
+.near-card i{
+    font-size:48px;
+    color:#D4AF37;
+    margin-bottom:20px;
+}
+
+.near-card h5{
+    color:#fff;
+    margin-bottom:12px;
+    font-size:22px;
+}
+
+.near-card p{
+    margin-bottom:0;
+}
+
+
+/*=====================================================
+                GOOGLE MAP
+======================================================*/
+
+.map-section iframe{
+    width:100%;
+    height:500px;
+    border:none;
+    border-radius:25px;
+    border:3px solid #D4AF37;
+    box-shadow:
+        0 25px 45px rgba(0,0,0,.35),
+        0 0 25px rgba(212,175,55,.12);
+}
+
+.map-container{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px; /* Optional */
+}
+
+.map-frame{
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+
+/*=====================================================
+                ANIMATIONS
+======================================================*/
+
+@keyframes floatImage{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+}
+
+@keyframes glassShine{
+
+    100%{
+
+        transform:translateX(120%);
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.fade-up{
+
+    animation:fadeIn .8s ease forwards;
+}
+
+
+
+/*=====================================================
+                SCROLLBAR
+======================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#D4AF37;
+
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#e6c35a;
+}
+
+
+
+/*=====================================================
+                RESPONSIVE
+======================================================*/
+
+@media(max-width:1200px){
+
+    .about-title{
+
+        font-size:4rem;
+    }
+
+    .section-title{
+
+        font-size:38px;
+    }
+
+}
+
+@media(max-width:992px){
+
+    section{
+
+        padding:70px 0;
+    }
+
+    .about-title{
+
+        font-size:3.2rem;
+
+        text-align:center;
+    }
+
+    .about-description{
+
+        text-align:center;
+
+        margin:auto auto 35px;
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+    }
+
+    .hero-badges{
+
+        grid-template-columns:1fr;
+
+        margin-top:40px;
+    }
+
+    .glass-image-box{
+
+        margin-top:60px;
+    }
+
+    .story-content{
+
+        padding-left:0;
+
+        margin-top:40px;
+    }
+
+    .contact-box{
+
+        padding:40px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    section{
+
+        padding:60px 0;
+    }
+
+    .about-title{
+
+        font-size:2.5rem;
+    }
+
+    .section-title{
+
+        font-size:32px;
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+    }
+
+    .hero-buttons .btn{
+
+        width:100%;
+    }
+
+    .contact-buttons{
+
+        flex-direction:column;
+    }
+
+    .contact-buttons .btn{
+
+        width:100%;
+    }
+
+    .timeline{
+
+        padding-left:25px;
+    }
+
+    .timeline-item::before{
+
+        left:-37px;
+    }
+
+    .overall-rating h3{
+
+        font-size:48px;
+    }
+
+    .stat-box h2{
+
+        font-size:48px;
+    }
+
+    .review-card{
+
+        height:auto;
+
+        min-height:260px;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .about-title{
+
+        font-size:2rem;
+    }
+
+    .section-title{
+
+        font-size:28px;
+    }
+
+    .contact-box{
+
+        padding:30px 20px;
+    }
+
+    .glass-image-box{
+
+        padding:12px;
+    }
+
+    .badge-box{
+
+        padding:15px;
+    }
+
+}
+
+/*=====================================================
+            NEARBY MOBILE FIX
+======================================================*/
+
+@media (max-width:768px){
+
+    .near-card{
+
+        min-height:170px;
+
+        padding:28px 18px;
+
+        margin-bottom:18px;
+
+    }
+
+    .near-card i{
+
+        font-size:34px;
+
+        margin-bottom:12px;
+
+    }
+
+    .near-card h5{
+
+        font-size:18px;
+
+        margin-bottom:6px;
+
+    }
+
+    .near-card p{
+
+        font-size:15px;
+
+    }
+
+}
