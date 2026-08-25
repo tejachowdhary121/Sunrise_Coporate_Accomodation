@@ -154,37 +154,43 @@ function initStickyNavbar() {
 
 }
 
-// ================================
-// ACTIVE NAVIGATION TAB
-// ================================
-document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll(".nav-link");
+/* ========================================
+   ACTIVE NAVIGATION LINK
+======================================== */
 
-    // Get current page
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navLinks = document.querySelectorAll(".navbar .nav-link");
+
     let currentPage = window.location.pathname
         .split("/")
         .pop()
         .toLowerCase();
 
-    // Netlify homepage may return an empty filename
+    // Fix for Netlify homepage
     if (currentPage === "" || currentPage === "/") {
         currentPage = "index.html";
     }
 
     navLinks.forEach(function (link) {
-        const linkPage = link.getAttribute("href")
+
+        link.classList.remove("active");
+
+        const href = link.getAttribute("href");
+
+        if (!href) return;
+
+        const linkPage = href
             .split("/")
             .pop()
             .toLowerCase();
 
-        // Remove active from all tabs first
-        link.classList.remove("active");
-
-        // Add active to matching page
         if (linkPage === currentPage) {
             link.classList.add("active");
         }
+
     });
+
 });
 
 /*=========================================================
