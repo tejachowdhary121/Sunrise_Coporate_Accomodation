@@ -160,49 +160,43 @@ function initStickyNavbar() {
 
 function initActiveNav() {
 
-    // Get only the current file name
-    let currentPage = window.location.pathname
+    const currentPath = window.location.pathname
+        .replace(/\/+$/, "");
+
+    let currentPage = currentPath
         .split("/")
         .pop();
 
-    // Default homepage
+    // Homepage
     if (
         currentPage === "" ||
-        currentPage === "/" ||
-        currentPage === "index"
+        currentPage === "index" ||
+        currentPage === "index.html"
     ) {
-
         currentPage = "index.html";
-
     }
 
     // Handle Netlify clean URLs
     if (!currentPage.includes(".")) {
-
         currentPage += ".html";
-
     }
 
-    // Remove active class from every navigation link
-    document.querySelectorAll(".navbar .nav-link").forEach(link => {
+    document
+        .querySelectorAll(".navbar .nav-link")
+        .forEach(link => {
 
-        link.classList.remove("active");
+            link.classList.remove("active");
 
-    });
+            const href = link
+                .getAttribute("href")
+                ?.split("/")
+                .pop();
 
-    // Add active class only to current page
-    document.querySelectorAll(".navbar .nav-link").forEach(link => {
+            if (href === currentPage) {
+                link.classList.add("active");
+            }
 
-        const href = link.getAttribute("href");
-
-        if (href === currentPage) {
-
-            link.classList.add("active");
-
-        }
-
-    });
-
+        });
 }
 
 /*=========================================================
