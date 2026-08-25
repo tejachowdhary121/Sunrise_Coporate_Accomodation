@@ -165,19 +165,17 @@ function initActiveNav() {
         .pop()
         .toLowerCase();
 
-    /* Handle Home Page */
-
+    // Handle Home page
     if (
         currentPage === "" ||
-        currentPage === "index" ||
-        currentPage === "index.html"
+        currentPage === "/" ||
+        currentPage === "index.html" ||
+        currentPage === "index"
     ) {
         currentPage = "index.html";
     }
 
-    const navLinks = document.querySelectorAll(
-        ".navbar .nav-link"
-    );
+    const navLinks = document.querySelectorAll(".navbar .nav-link");
 
     navLinks.forEach(function (link) {
 
