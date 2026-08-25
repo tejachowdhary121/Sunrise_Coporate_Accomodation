@@ -832,17 +832,13 @@ section{
 
 
 /* Active Link */
-
-.navbar .navbar-nav .nav-link.active{
-    color:var(--primary) !important;
-
-    background:rgba(212,175,55,.15) !important;
-
-    border:1px solid rgba(212,175,55,.45) !important;
-
-    border-radius:9px !important;
-
-    box-shadow:0 4px 14px rgba(212,175,55,.10) !important;
+.navbar .navbar-nav .nav-link.active {
+    display: inline-block !important;
+    color: var(--primary) !important;
+    background-color: rgba(212, 175, 55, 0.15) !important;
+    border: 1px solid rgba(212, 175, 55, 0.45) !important;
+    border-radius: 9px !important;
+    box-shadow: 0 4px 14px rgba(212, 175, 55, 0.10) !important;
 }
 
 

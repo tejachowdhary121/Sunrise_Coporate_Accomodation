@@ -154,38 +154,43 @@ function initStickyNavbar() {
 
 }
 
-/* ========================================
+/* =========================================
    ACTIVE NAVIGATION LINK
-======================================== */
+========================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
     const navLinks = document.querySelectorAll(".navbar .nav-link");
 
-    let currentPage = window.location.pathname
-        .split("/")
-        .pop()
-        .toLowerCase();
+    // Remove active class from every link
+    navLinks.forEach(function (link) {
+        link.classList.remove("active");
+    });
 
-    // Fix for Netlify homepage
-    if (currentPage === "" || currentPage === "/") {
-        currentPage = "index.html";
-    }
+    // Get current pathname
+    const currentPath = window.location.pathname.toLowerCase();
 
     navLinks.forEach(function (link) {
-
-        link.classList.remove("active");
 
         const href = link.getAttribute("href");
 
         if (!href) return;
 
-        const linkPage = href
-            .split("/")
-            .pop()
-            .toLowerCase();
+        // HOME PAGE
+        if (
+            (currentPath === "/" ||
+             currentPath === "" ||
+             currentPath === "/index.html") &&
+            href.toLowerCase() === "index.html"
+        ) {
+            link.classList.add("active");
+        }
 
-        if (linkPage === currentPage) {
+        // OTHER PAGES
+        else if (
+            currentPath.endsWith("/" + href.toLowerCase()) ||
+            currentPath.endsWith(href.toLowerCase())
+        ) {
             link.classList.add("active");
         }
 
