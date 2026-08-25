@@ -160,16 +160,17 @@ function initStickyNavbar() {
 
 function initActiveNav() {
 
-    const currentPath = window.location.pathname
-        .replace(/\/+$/, "");
+    const path = window.location.pathname;
 
-    let currentPage = currentPath
+    let currentPage = path
         .split("/")
-        .pop();
+        .pop()
+        .toLowerCase();
 
-    // Homepage
+    // Handle homepage URLs
     if (
         currentPage === "" ||
+        currentPage === "/" ||
         currentPage === "index" ||
         currentPage === "index.html"
     ) {
@@ -181,22 +182,22 @@ function initActiveNav() {
         currentPage += ".html";
     }
 
-    document
-        .querySelectorAll(".navbar .nav-link")
-        .forEach(link => {
+    document.querySelectorAll(".navbar .nav-link").forEach(link => {
 
-            link.classList.remove("active");
+        link.classList.remove("active");
 
-            const href = link
-                .getAttribute("href")
-                ?.split("/")
-                .pop();
+        let linkPage = link
+            .getAttribute("href")
+            .split("/")
+            .pop()
+            .toLowerCase();
 
-            if (href === currentPage) {
-                link.classList.add("active");
-            }
+        if (linkPage === currentPage) {
+            link.classList.add("active");
+        }
 
-        });
+    });
+
 }
 
 /*=========================================================
