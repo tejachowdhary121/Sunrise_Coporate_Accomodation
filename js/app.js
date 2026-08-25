@@ -160,29 +160,18 @@ function initStickyNavbar() {
 
 function initActiveNav() {
 
-    const path = window.location.pathname;
-
-    let currentPage = path
+    const currentPage = window.location.pathname
         .split("/")
         .pop()
         .toLowerCase();
 
-    // Handle homepage URLs
-    if (
-        currentPage === "" ||
-        currentPage === "/" ||
-        currentPage === "index" ||
-        currentPage === "index.html"
-    ) {
-        currentPage = "index.html";
-    }
+    const page = currentPage || "index.html";
 
-    // Handle Netlify clean URLs
-    if (!currentPage.includes(".")) {
-        currentPage += ".html";
-    }
+    const navLinks = document.querySelectorAll(
+        ".navbar .nav-link"
+    );
 
-    document.querySelectorAll(".navbar .nav-link").forEach(link => {
+    navLinks.forEach(function (link) {
 
         link.classList.remove("active");
 
@@ -192,8 +181,10 @@ function initActiveNav() {
             .pop()
             .toLowerCase();
 
-        if (linkPage === currentPage) {
+        if (linkPage === page) {
+
             link.classList.add("active");
+
         }
 
     });
@@ -1039,7 +1030,7 @@ function initGallery() {
 
         galleryGrid.querySelectorAll(".gallery-item");
 
-            /*=========================================================
+    /*=========================================================
                     UPDATE GALLERY
     =========================================================*/
 
