@@ -154,46 +154,38 @@ function initStickyNavbar() {
 
 }
 
-/*=========================================================
-                    ACTIVE NAVIGATION
-=========================================================*/
+// ================================
+// ACTIVE NAVIGATION TAB
+// ================================
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-link");
 
-function initActiveNav() {
-
+    // Get current page
     let currentPage = window.location.pathname
         .split("/")
         .pop()
         .toLowerCase();
 
-    // Handle Home page
-    if (
-        currentPage === "" ||
-        currentPage === "/" ||
-        currentPage === "index.html" ||
-        currentPage === "index"
-    ) {
+    // Netlify homepage may return an empty filename
+    if (currentPage === "" || currentPage === "/") {
         currentPage = "index.html";
     }
 
-    const navLinks = document.querySelectorAll(".navbar .nav-link");
-
     navLinks.forEach(function (link) {
-
-        link.classList.remove("active");
-
-        const linkPage = link
-            .getAttribute("href")
+        const linkPage = link.getAttribute("href")
             .split("/")
             .pop()
             .toLowerCase();
 
+        // Remove active from all tabs first
+        link.classList.remove("active");
+
+        // Add active to matching page
         if (linkPage === currentPage) {
             link.classList.add("active");
         }
-
     });
-
-}
+});
 
 /*=========================================================
                 SCROLL REVEAL
