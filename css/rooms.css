@@ -11,7 +11,7 @@
     padding:72px 0 48px;
     background:linear-gradient(rgba(0,0,0,.78),
                                rgba(0,0,0,.82)),
-               url("img/image.jpeg");
+               url("../img/image.jpeg");
     background-size:cover;
     background-position:center;
 }
