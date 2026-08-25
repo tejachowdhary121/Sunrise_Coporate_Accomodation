@@ -160,12 +160,20 @@ function initStickyNavbar() {
 
 function initActiveNav() {
 
-    const currentPage = window.location.pathname
+    let currentPage = window.location.pathname
         .split("/")
         .pop()
         .toLowerCase();
 
-    const page = currentPage || "index.html";
+    /* Handle Home Page */
+
+    if (
+        currentPage === "" ||
+        currentPage === "index" ||
+        currentPage === "index.html"
+    ) {
+        currentPage = "index.html";
+    }
 
     const navLinks = document.querySelectorAll(
         ".navbar .nav-link"
@@ -175,16 +183,14 @@ function initActiveNav() {
 
         link.classList.remove("active");
 
-        let linkPage = link
+        const linkPage = link
             .getAttribute("href")
             .split("/")
             .pop()
             .toLowerCase();
 
-        if (linkPage === page) {
-
+        if (linkPage === currentPage) {
             link.classList.add("active");
-
         }
 
     });
