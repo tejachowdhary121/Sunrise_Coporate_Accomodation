@@ -154,46 +154,50 @@ function initStickyNavbar() {
 
 }
 
-/*=========================================================
-                    ACTIVE NAVIGATION
-=========================================================*/
+/* =========================================
+   ACTIVE NAVIGATION LINK
+========================================= */
 
-function initActiveNav() {
+document.addEventListener("DOMContentLoaded", function () {
 
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+    // Current URL path
     let currentPage = window.location.pathname
         .split("/")
         .pop()
         .toLowerCase();
 
-    // Handle Home page
-    if (
-        currentPage === "" ||
-        currentPage === "/" ||
-        currentPage === "index.html" ||
-        currentPage === "index"
-    ) {
-        currentPage = "index.html";
+    // Homepage
+    if (currentPage === "") {
+        currentPage = "index";
     }
 
-    const navLinks = document.querySelectorAll(".navbar .nav-link");
+    // Remove .html if it exists
+    currentPage = currentPage.replace(".html", "");
 
     navLinks.forEach(function (link) {
 
+        let linkPage = link.getAttribute("href");
+
+        if (!linkPage) return;
+
+        // Remove active first
         link.classList.remove("active");
 
-        const linkPage = link
-            .getAttribute("href")
-            .split("/")
-            .pop()
-            .toLowerCase();
+        // Remove .html and convert to lowercase
+        linkPage = linkPage
+            .toLowerCase()
+            .replace(".html", "");
 
+        // Add active to matching page
         if (linkPage === currentPage) {
             link.classList.add("active");
         }
 
     });
 
-}
+});
 
 /*=========================================================
                 SCROLL REVEAL
