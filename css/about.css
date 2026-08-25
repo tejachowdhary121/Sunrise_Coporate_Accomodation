@@ -78,7 +78,6 @@ p{
 }
 
 
-
 /*=====================================================
                 SECTION BACKGROUNDS
 ======================================================*/
@@ -104,7 +103,6 @@ p{
     background:#101010;
 
 }
-
 
 
 /*=====================================================
@@ -139,7 +137,6 @@ p{
 }
 
 
-
 /* decorative glow */
 
 .about-hero::before{
@@ -169,7 +166,6 @@ p{
     z-index:5;
 
 }
-
 
 
 /*=====================================================
@@ -207,7 +203,6 @@ p{
     max-width:650px;
 
 }
-
 
 
 /*=====================================================
@@ -271,7 +266,6 @@ p{
 }
 
 
-
 /*=====================================================
                 GLASS IMAGE
 ======================================================*/
@@ -317,7 +311,6 @@ p{
 }
 
 
-
 /* Glass shine */
 
 .glass-image-box::before{
@@ -349,7 +342,6 @@ p{
 }
 
 
-
 .about-image{
 
     border-radius:25px;
@@ -359,7 +351,6 @@ p{
     z-index:2;
 
 }
-
 
 
 /*=====================================================
@@ -377,7 +368,6 @@ p{
     margin-top:45px;
 
 }
-
 
 
 .badge-box{
@@ -423,7 +413,6 @@ p{
     font-weight:500;
 
 }
-
 
 
 /*=====================================================
@@ -474,6 +463,11 @@ p{
 
     margin-bottom:25px;
 
+}
+
+/* Keep this heading on one line on larger screens */
+.about-story .section-title{
+    white-space:nowrap;
 }
 
 .story-content p{
@@ -860,7 +854,7 @@ p{
 
     height:4px;
 
-    margin-top:15px;
+    margin:15px auto 0;
 
     background:#D4AF37;
 
@@ -966,7 +960,6 @@ p{
 }
 
 
-
 /*=====================================================
                 STATISTICS
 ======================================================*/
@@ -1017,7 +1010,6 @@ p{
 }
 
 
-
 /*=====================================================
                 OVERALL RATING
 ======================================================*/
@@ -1060,7 +1052,6 @@ p{
 
     font-size:18px;
 }
-
 
 
 /*=====================================================
@@ -1149,6 +1140,10 @@ p{
     margin:0;
 }
 
+.last-review-card{
+    width:100%;
+}
+
 /* animation */
 
 .slide-up{
@@ -1200,7 +1195,6 @@ opacity:0;
 }
 
 
-
 /*=====================================================
             REVIEW SHINE EFFECT
 ======================================================*/
@@ -1236,7 +1230,6 @@ opacity:0;
 
     transform:translateX(120%);
 }
-
 
 
 /*=====================================================
@@ -1291,7 +1284,6 @@ opacity:0;
 }
 
 
-
 /*=====================================================
             REVIEW AVATAR
 ======================================================*/
@@ -1322,7 +1314,6 @@ opacity:0;
 }
 
 
-
 /*=====================================================
         AUTO REVIEW FADE ANIMATION
 ======================================================*/
@@ -1338,7 +1329,6 @@ opacity:0;
 }
 
 
-
 /*=====================================================
             REVIEW GRID SPACING
 ======================================================*/
@@ -1347,7 +1337,6 @@ opacity:0;
 
     row-gap:30px;
 }
-
 
 
 /*=====================================================
@@ -1374,7 +1363,6 @@ opacity:0;
 }
 
 
-
 /*=====================================================
         REVIEW BORDER GLOW
 ======================================================*/
@@ -1387,7 +1375,6 @@ opacity:0;
 
         0 0 25px rgba(212,175,55,.12);
 }
-
 
 
 /*=====================================================
@@ -1533,7 +1520,6 @@ opacity:0;
 }
 
 
-
 /*=====================================================
                 SCROLLBAR
 ======================================================*/
@@ -1561,208 +1547,968 @@ opacity:0;
 }
 
 
-
 /*=====================================================
-                RESPONSIVE
-======================================================*/
+                RESPONSIVE DESIGN
+=====================================================*/
 
-@media(max-width:1200px){
+/* ==============================
+        TABLET - 992px
+================================= */
 
-    .about-title{
-
-        font-size:4rem;
-    }
-
-    .section-title{
-
-        font-size:38px;
-    }
-
-}
-
-@media(max-width:992px){
+@media (max-width: 992px){
 
     section{
-
         padding:70px 0;
     }
 
+    .about-hero{
+        min-height:auto;
+        padding:80px 0 80px;
+    }
+
     .about-title{
-
         font-size:3.2rem;
-
         text-align:center;
     }
 
     .about-description{
-
         text-align:center;
-
-        margin:auto auto 35px;
+        margin:0 auto 30px;
     }
 
     .hero-buttons{
-
         justify-content:center;
     }
 
     .hero-badges{
-
-        grid-template-columns:1fr;
-
-        margin-top:40px;
+        grid-template-columns:repeat(2,1fr);
+        margin-top:35px;
     }
 
     .glass-image-box{
-
-        margin-top:60px;
+        margin-top:45px;
     }
 
     .story-content{
-
         padding-left:0;
+        margin-top:35px;
+    }
 
-        margin-top:40px;
+    .section-title{
+        font-size:38px;
     }
 
     .contact-box{
-
         padding:40px;
     }
 
 }
 
-@media(max-width:768px){
 
-    section{
-
-        padding:60px 0;
-    }
-
-    .about-title{
-
-        font-size:2.5rem;
-    }
-
-    .section-title{
-
-        font-size:32px;
-    }
-
-    .hero-buttons{
-
-        flex-direction:column;
-    }
-
-    .hero-buttons .btn{
-
-        width:100%;
-    }
-
-    .contact-buttons{
-
-        flex-direction:column;
-    }
-
-    .contact-buttons .btn{
-
-        width:100%;
-    }
-
-    .timeline{
-
-        padding-left:25px;
-    }
-
-    .timeline-item::before{
-
-        left:-37px;
-    }
-
-    .overall-rating h3{
-
-        font-size:48px;
-    }
-
-    .stat-box h2{
-
-        font-size:48px;
-    }
-
-    .review-card{
-
-        height:auto;
-
-        min-height:260px;
-    }
-
-}
-
-@media(max-width:576px){
-
-    .about-title{
-
-        font-size:2rem;
-    }
-
-    .section-title{
-
-        font-size:28px;
-    }
-
-    .contact-box{
-
-        padding:30px 20px;
-    }
-
-    .glass-image-box{
-
-        padding:12px;
-    }
-
-    .badge-box{
-
-        padding:15px;
-    }
-
-}
-
-/*=====================================================
-            NEARBY MOBILE FIX
-======================================================*/
+/* =====================================================
+                MOBILE - 768px
+===================================================== */
 
 @media (max-width:768px){
 
-    .near-card{
+    /* --------------------------------
+                GLOBAL
+    -------------------------------- */
 
+    section{
+        padding:38px 0;
+    }
+
+    .container{
+        padding-left:18px;
+        padding-right:18px;
+    }
+
+    p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+
+    /* --------------------------------
+                SECTION HEADINGS
+    -------------------------------- */
+
+    .section-subtitle{
+        font-size:11px;
+        letter-spacing:3px;
+        margin-bottom:8px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .section-title{
+        font-size:28px;
+        margin-bottom:16px;
+        line-height:1.3;
+    }
+
+    .section-title::after{
+        width:70px;
+        height:3px;
+        margin:10px auto 0;
+    }
+
+
+    /* --------------------------------
+                HERO
+    -------------------------------- */
+
+    .about-hero{
+        min-height:auto;
+        padding:35px 0 45px;
+    }
+
+    .about-title{
+        font-size:2.4rem;
+        line-height:1.15;
+        margin-bottom:15px;
+    }
+
+    .about-description{
+        font-size:14px;
+        line-height:1.8;
+        margin-bottom:22px;
+    }
+
+    .hero-buttons{
+        flex-direction:row;
+        gap:10px;
+        margin-bottom:25px;
+    }
+
+    .hero-buttons .btn{
+        width:auto;
+        flex:1;
+        padding:12px 10px;
+        font-size:13px;
+        white-space:nowrap;
+    }
+
+
+    /* --------------------------------
+                HERO IMAGE
+    -------------------------------- */
+
+    .glass-image-box{
+        width:100%;
+        padding:8px;
+        border-radius:20px;
+        margin-top:28px;
+        animation:none;
+    }
+
+    .about-image{
+        width:100%;
+        border-radius:15px;
+    }
+
+
+    /* --------------------------------
+                HERO BADGES
+    -------------------------------- */
+
+    .hero-badges{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+        margin-top:22px;
+    }
+
+    .badge-box{
+        padding:12px 10px;
+        border-radius:14px;
+        gap:8px;
+    }
+
+    .badge-box i{
+        font-size:20px;
+    }
+
+    .badge-box span{
+        font-size:11px;
+        line-height:1.3;
+    }
+
+
+    /* --------------------------------
+                ABOUT STORY
+    -------------------------------- */
+
+    .story-image{
+        border-radius:16px;
+    }
+
+    .story-content{
+        margin-top:22px;
+        padding-left:0;
+    }
+
+    .story-content h2{
+        font-size:27px;
+        margin-bottom:14px;
+    }
+
+    .about-story .section-title{
+        white-space:normal;
+    }
+
+    .story-content p{
+        margin-bottom:12px;
+    }
+
+    .story-features{
+        margin-top:20px;
+    }
+
+    .story-feature{
+        margin-bottom:12px;
+    }
+
+    .story-feature i{
+        font-size:19px;
+        margin-right:10px;
+    }
+
+    .story-feature span{
+        font-size:13px;
+    }
+
+
+    /* --------------------------------
+                MISSION & VISION
+    -------------------------------- */
+
+    .mission-section .row{
+        row-gap:14px;
+    }
+
+    .mission-card{
+        padding:24px 18px;
+        border-radius:16px;
+    }
+
+    .mission-card i{
+        font-size:38px;
+        margin-bottom:12px;
+    }
+
+    .mission-card h4{
+        font-size:19px;
+        margin-bottom:10px;
+    }
+
+    .mission-card p{
+        font-size:13px;
+    }
+
+
+    /* --------------------------------
+                JOURNEY
+    -------------------------------- */
+
+    .timeline{
+        margin-top:25px;
+        margin-left:8px;
+        padding-left:28px;
+        border-left-width:2px;
+    }
+
+    .timeline-item{
+        padding-bottom:28px;
+    }
+
+    .timeline-item::before{
+        left:-36px;
+        top:4px;
+        width:16px;
+        height:16px;
+        border-width:4px;
+    }
+
+    .timeline-year{
+        padding:4px 12px;
+        font-size:11px;
+        margin-bottom:8px;
+    }
+
+    .timeline-item h4{
+        font-size:16px;
+        margin-bottom:7px;
+    }
+
+    .timeline-item p{
+        font-size:13px;
+        line-height:1.6;
+    }
+
+
+    /* --------------------------------
+                WHY CHOOSE US - 2 x 2 GRID
+    -------------------------------- */
+
+    .why-sunrise .row{
+        display:flex;
+        flex-wrap:wrap;
+        margin-left:-6px;
+        margin-right:-6px;
+        row-gap:12px;
+    }
+
+    .why-sunrise .row > div{
+        width:50%;
+        flex:0 0 50%;
+        max-width:50%;
+        padding-left:6px;
+        padding-right:6px;
+        margin-bottom:0;
+    }
+
+    .choose-card{
+        width:100%;
+        height:100%;
         min-height:170px;
+        padding:18px 10px;
+        border-radius:16px;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+    }
 
-        padding:28px 18px;
+    .choose-card img{
+        width:46px;
+        margin:0 auto 10px;
+    }
 
-        margin-bottom:18px;
+    .choose-card h4{
+        font-size:15px;
+        margin-bottom:6px;
+    }
 
+    .choose-card p{
+        font-size:11px;
+        line-height:1.5;
+        margin-bottom:0;
+    }
+
+
+    /* --------------------------------
+                PREMIUM INTRO
+    -------------------------------- */
+
+    .premium-intro{
+        margin:15px auto 28px;
+    }
+
+    .premium-intro p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+
+    /* --------------------------------
+                FACILITIES
+    -------------------------------- */
+
+    .facility-grid .row{
+        row-gap:12px;
+    }
+
+    .facility-box{
+        padding:20px 12px;
+        border-radius:16px;
+    }
+
+    .facility-box img{
+        width:48px;
+        margin-bottom:10px;
+    }
+
+    .facility-box h5{
+        font-size:15px;
+        margin-bottom:6px;
+    }
+
+    .facility-box p{
+        font-size:12px;
+        line-height:1.5;
+    }
+
+
+    /* --------------------------------
+                VALUES
+    -------------------------------- */
+
+    .values-section .row{
+        row-gap:14px;
+    }
+
+    .value-card{
+        padding:24px 16px;
+        border-radius:16px;
+    }
+
+    .value-card i{
+        font-size:38px;
+        margin-bottom:12px;
+    }
+
+    .value-card h4{
+        font-size:18px;
+        margin-bottom:8px;
+    }
+
+    .value-card p{
+        font-size:13px;
+    }
+
+
+    /* --------------------------------
+                STATISTICS
+    -------------------------------- */
+
+    .stats-section .row{
+        row-gap:5px;
+    }
+
+    .stat-box{
+        padding:18px 8px;
+    }
+
+    .stat-box h2{
+        font-size:34px;
+        margin-bottom:5px;
+    }
+
+    .stat-box h5{
+        font-size:15px;
+        margin-bottom:5px;
+    }
+
+    .stat-box p{
+        font-size:11px;
+    }
+
+
+    /* --------------------------------
+                TESTIMONIALS
+    -------------------------------- */
+
+    .reviews-section{
+        padding-bottom:35px;
+    }
+
+    .overall-rating{
+        margin-bottom:28px;
+    }
+
+    .rating-stars{
+        font-size:27px;
+        letter-spacing:3px;
+        margin-bottom:8px;
+    }
+
+    .overall-rating h3{
+        font-size:40px;
+        margin-bottom:5px;
+    }
+
+    .overall-rating p{
+        font-size:13px;
+    }
+
+    .review-grid{
+        row-gap:12px;
+    }
+
+    .review-card{
+        height:auto;
+        min-height:0;
+        padding:20px 16px;
+        border-radius:16px;
+    }
+
+    .review-content{
+        height:auto;
+        min-height:0;
+        overflow:visible;
+    }
+
+    .review-card .stars{
+        font-size:15px;
+        margin-bottom:8px;
+    }
+
+    .review-card p{
+        font-size:13px;
+        line-height:1.6;
+        min-height:0;
+        margin-bottom:12px;
+    }
+
+    .review-card h5{
+        font-size:15px;
+        margin-top:10px;
+        margin-bottom:2px;
+    }
+
+    .review-card small{
+        font-size:11px;
+    }
+
+    .review-card::after{
+        font-size:48px;
+        right:15px;
+        top:5px;
+    }
+
+
+    /* --------------------------------
+                NEARBY PLACES
+
+        MAKES CARDS COMPACT
+        TWO CARDS PER ROW
+    -------------------------------- */
+
+    .nearby-section{
+        padding-bottom:35px;
+    }
+
+    .nearby-section .row{
+        row-gap:10px;
+    }
+
+    .nearby-section .col-md-4,
+    .nearby-section .col-lg-3{
+        padding-left:5px;
+        padding-right:5px;
+    }
+
+    .near-card{
+        min-height:115px;
+        padding:14px 8px;
+        margin-bottom:0;
+        border-radius:14px;
     }
 
     .near-card i{
-
-        font-size:34px;
-
-        margin-bottom:12px;
-
+        font-size:24px;
+        margin-bottom:7px;
     }
 
     .near-card h5{
-
-        font-size:18px;
-
-        margin-bottom:6px;
-
+        font-size:13px;
+        margin-bottom:4px;
     }
 
     .near-card p{
+        font-size:11px;
+        line-height:1.4;
+    }
 
-        font-size:15px;
 
+    /* --------------------------------
+                GOOGLE MAP
+    -------------------------------- */
+
+    .map-section{
+        padding-top:35px;
+        padding-bottom:35px;
+    }
+
+    .map-section iframe{
+        height:260px;
+        border-radius:15px;
+        border-width:2px;
+    }
+
+    .map-frame{
+        height:260px;
+    }
+
+
+    /* --------------------------------
+                HOVER EFFECTS
+
+        REMOVE LIFTING ON MOBILE
+    -------------------------------- */
+
+    .mission-card:hover,
+    .choose-card:hover,
+    .facility-box:hover,
+    .value-card:hover,
+    .near-card:hover,
+    .review-card:hover,
+    .stat-box:hover{
+        transform:none;
+    }
+
+}
+
+
+/* =====================================================
+                SMALL MOBILE - 576px
+===================================================== */
+
+@media (max-width:576px){
+
+    /* More compact spacing */
+
+    section{
+        padding:30px 0;
+    }
+
+    .container{
+        padding-left:14px;
+        padding-right:14px;
+    }
+
+
+    /* HERO */
+
+    .about-hero{
+        padding:25px 0 35px;
+    }
+
+    .about-title{
+        font-size:2rem;
+    }
+
+    .about-description{
+        font-size:13px;
+        line-height:1.7;
+    }
+
+    .hero-buttons .btn{
+        font-size:12px;
+        padding:11px 7px;
+    }
+
+
+    /* HEADINGS */
+
+    .section-subtitle{
+        font-size:10px;
+        letter-spacing:2.5px;
+    }
+
+    .section-title{
+        font-size:24px;
+        margin-bottom:12px;
+    }
+
+
+    /* HERO BADGES */
+
+    .hero-badges{
+        gap:8px;
+    }
+
+    .badge-box{
+        padding:10px 8px;
+    }
+
+    .badge-box i{
+        font-size:18px;
+    }
+
+    .badge-box span{
+        font-size:10px;
+    }
+
+
+    /* STORY */
+
+    .story-content h2{
+        font-size:23px;
+    }
+
+
+    /* CARDS */
+
+    .mission-card,
+    .choose-card,
+    .value-card{
+        padding:20px 14px;
+    }
+
+    .mission-card i,
+    .value-card i{
+        font-size:32px;
+    }
+
+
+    /* FACILITIES */
+
+    .facility-box{
+        padding:16px 8px;
+    }
+
+    .facility-box img{
+        width:42px;
+    }
+
+    .facility-box h5{
+        font-size:13px;
+    }
+
+    .facility-box p{
+        display:none;
+    }
+
+
+    /* JOURNEY */
+
+    .timeline{
+        margin-top:20px;
+        padding-left:24px;
+    }
+
+    .timeline-item{
+        padding-bottom:22px;
+    }
+
+    .timeline-item::before{
+        left:-32px;
+        width:14px;
+        height:14px;
+    }
+
+
+    /* STATS */
+
+    .stat-box{
+        padding:14px 5px;
+    }
+
+    .stat-box h2{
+        font-size:30px;
+    }
+    /* MAP */
+
+    .map-section iframe,
+    .map-frame{
+        height:220px;
+    }
+
+}
+
+
+/* =====================================================
+            VERY SMALL MOBILE - 400px
+===================================================== */
+
+@media (max-width:400px){
+
+    .about-title{
+        font-size:1.8rem;
+    }
+
+    .section-title{
+        font-size:22px;
+    }
+
+    .hero-buttons{
+        gap:7px;
+    }
+
+    .hero-buttons .btn{
+        font-size:11px;
+    }
+
+    .hero-badges{
+        grid-template-columns:1fr;
+    }
+}
+
+/* =====================================================
+   MOBILE CARD LAYOUT FIX
+===================================================== */
+
+@media (max-width:768px){
+
+    /* ===============================
+       VALUES - 2 × 2
+    =============================== */
+
+    .values-section .row{
+        row-gap:12px;
+    }
+
+    .values-section .col-6{
+        padding-left:6px;
+        padding-right:6px;
+    }
+
+    .value-card{
+        padding:22px 10px;
+        min-height:125px;
+
+        display:flex;
+        flex-direction:column;
+
+        justify-content:center;
+        align-items:center;
+    }
+
+    .value-card i{
+        font-size:30px;
+        margin-bottom:10px;
+    }
+
+    .value-card h4{
+        font-size:14px;
+        margin:0;
+    }
+
+
+    /* ===============================
+       REVIEWS - 2 PER ROW
+    =============================== */
+
+    .reviews-section .row{
+        row-gap:12px;
+    }
+
+    .reviews-section .col-6{
+        padding-left:6px;
+        padding-right:6px;
+    }
+
+    .review-card{
+        height:auto;
+        min-height:180px;
+
+        padding:16px 10px;
+
+        border-radius:16px;
+    }
+
+    .review-content{
+        height:auto;
+        min-height:145px;
+    }
+
+    .review-item{
+        padding:5px;
+    }
+
+    .review-item .stars{
+        font-size:12px;
+        letter-spacing:0;
+        margin-bottom:8px;
+    }
+
+    .review-item p{
+        font-size:11px;
+        line-height:1.5;
+        margin-bottom:10px;
+    }
+
+    .review-item h5{
+        font-size:13px;
+    }
+
+
+    /* LAST REVIEW CENTER */
+
+    .last-review-card{
+        width:100%;
+        max-width:220px;
+    }
+
+
+    /* ===============================
+       NEARBY - 4 CARDS IN ONE ROW
+    =============================== */
+
+    .nearby-section .row{
+        margin-left:-3px;
+        margin-right:-3px;
+
+        row-gap:0;
+    }
+
+    .nearby-section .col-3{
+        padding-left:3px;
+        padding-right:3px;
+    }
+
+    .near-card{
+        width:100%;
+        min-height:120px;
+        height:100%;
+
+        padding:12px 4px;
+
+        border-radius:14px;
+
+        display:flex;
+        flex-direction:column;
+
+        justify-content:center;
+        align-items:center;
+    }
+
+    .near-card i{
+        font-size:23px;
+
+        margin-bottom:8px;
+    }
+
+    .near-card h5{
+        font-size:10px;
+
+        margin-bottom:5px;
+
+        white-space:normal;
+
+        text-align:center;
+
+        line-height:1.25;
+    }
+
+    .near-card p{
+        font-size:9px;
+
+        margin:0;
+
+        white-space:normal;
+
+        text-align:center;
+
+        line-height:1.3;
+    }
+
+}
+
+/* ===========================================
+   WHO WE ARE - MOBILE ORDER
+   Text first, image after text
+=========================================== */
+
+@media (max-width: 768px) {
+
+    .about-story .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Image column goes after text */
+    .about-story .row > div:first-child {
+        order: 2;
+        margin-top: 25px;
+    }
+
+    /* Text column comes first */
+    .about-story .row > div:nth-child(2) {
+        order: 1;
     }
 
 }

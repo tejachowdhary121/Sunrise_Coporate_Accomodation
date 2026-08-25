@@ -61,58 +61,68 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg sticky-top premium-navbar">
+<!-- =======================================
+                NAVBAR
+======================================== -->
+
+<nav class="navbar navbar-expand-lg sticky-top">
 
     <div class="container">
 
+        <!-- MOBILE TOP GOD IMAGES -->
+        <div class="mobile-gods">
+
+            <img src="logo/ganesh.jpg" alt="God Image">
+
+            <img src="logo/venkateswara.jpg"
+                 alt="God Image"
+                 class="god-center">
+
+            <img src="logo/raghavendra.jpg" alt="God Image">
+
+        </div>
+
+
+        <!-- SUNRISE LOGO -->
         <a class="navbar-brand" href="index.html">
 
-            <img src="logo/sunrise.png" class="logo-img" alt="Sunrise">
+            <img src="logo/sunrise.png"
+                 class="logo-img"
+                 alt="Sunrise">
 
         </a>
 
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                title="Toggle navigation">
 
-            <span class="navbar-toggler-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Toggle navigation</span>
-
-        </button>
-
-        <div class="collapse navbar-collapse"
+        <!-- NAVIGATION -->
+        <div class="collapse navbar-collapse show"
              id="navbarSupportedContent">
 
             <ul class="navbar-nav mx-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link active"
+                       href="index.html">Home</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
+                    <a class="nav-link"
+                       href="about.html">About Us</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="rooms.html">Rooms</a>
+                    <a class="nav-link"
+                       href="rooms.html">Rooms</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="foodmenu.html">Food Menu</a>
+                    <a class="nav-link"
+                       href="foodmenu.html">Food Menu</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="gallery.html">Gallery</a>
+                    <a class="nav-link"
+                       href="gallery.html">Gallery</a>
                 </li>
-
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="#">FAQs</a>
-                </li> -->
 
             </ul>
 
@@ -120,7 +130,7 @@
 
     </div>
 
-    </nav>
+</nav>
         
     
     <!--body-->
@@ -359,14 +369,14 @@
 
                                                 <div class="room-gallery">
 
-                                                    <img src="img/images (1).jpeg"
+                                                    <img src="img/image.jpeg"
                                                         class="main-room-image"
                                                         id="mainImage4"
                                                         alt="Four sharing room main view">
 
                                                     <div class="thumbnail-row">
 
-                                                        <img src="img/images (1).jpeg"
+                                                        <img src="img/image.jpeg"
                                                             alt="Thumbnail of four sharing room"
                                                             onclick="changeImage('mainImage4',this.src)">
 
@@ -577,14 +587,14 @@
 
                                                 <div class="room-gallery">
 
-                                                    <img src="img/images (1).jpeg"
+                                                    <img src="img/image.jpeg"
                                                         class="main-room-image"
                                                         id="mainImage3"
                                                         alt="Three sharing room main image">
 
                                                     <div class="thumbnail-row">
 
-                                                        <img src="img/images (1).jpeg"
+                                                        <img src="img/image.jpeg"
                                                             alt="Thumbnail of three sharing room"
                                                             onclick="changeImage('mainImage3',this.src)">
 
@@ -744,14 +754,14 @@
 
                                                 <div class="room-gallery">
 
-                                                    <img src="img/images (1).jpeg"
+                                                    <img src="img/image.jpeg"
                                                         class="main-room-image"
                                                         id="mainImage2"
                                                         alt="Main room image">
 
                                                     <div class="thumbnail-row">
 
-                                                        <img src="img/images (1).jpeg"
+                                                        <img src="img/image.jpeg"
                                                         onclick="changeImage('mainImage2',this.src)"
                                                         alt="Thumbnail showing the room">
 
@@ -880,7 +890,7 @@
                                                             View Details
                                                             </button>
 
-                                                            <a href="#" class="btn btn-dark">
+                                                            <a href="#" class="btn book-btn">
                                                                 Book Now
                                                             </a>
 
@@ -918,7 +928,7 @@
 
                                                 <div class="room-gallery">
 
-                                                    <img src="img/images (1).jpeg"
+                                                    <img src="img/image.jpeg"
                                                         class="main-room-image"
                                                         id="mainImage1"
                                                         alt="Main room view"
@@ -926,7 +936,7 @@
 
                                                     <div class="thumbnail-row">
 
-                                                        <img src="img/images (1).jpeg"
+                                                        <img src="img/image.jpeg"
                                                             onclick="changeImage('mainImage1',this.src)"
                                                             alt="Thumbnail of main room"
                                                             title="Thumbnail of main room">
@@ -1098,7 +1108,7 @@
 
                                                     <div class="thumbnail-row">
 
-                                                        <img src="img/images (1).jpeg"
+                                                        <img src="img/image.jpeg"
                                                             onclick="changeImage('mainImage5',this.src)"
                                                             alt="Thumbnail 1 of homestay hotel">
 
@@ -1296,13 +1306,13 @@
                                 <div class="col-lg-6">
 
                                     <img id="modalMainImage"
-                                        src="img/images (1).jpeg"
+                                        src="img/image.jpeg"
                                         class="modal-main-image"
                                         alt="Four Sharing room main image">
 
                                     <div class="modal-gallery mt-3">
 
-                                        <img src="img/images (1).jpeg"
+                                        <img src="img/image.jpeg"
                                             onclick="changeModalImage(this.src)"
                                             alt="Four Sharing room image 1">
 
@@ -1521,7 +1531,7 @@
 
                                 <li>
                                     <i class="bi bi-telephone-fill"></i>
-                                    <span>+91 XXXXX XXXXX</span>
+                                    <span>+91 98880 67555</span>
                                 </li>
 
                                 <li>
@@ -1557,7 +1567,7 @@
                                     <i class="bi bi-facebook fs-4"></i>
                                 </a>
 
-                                <a href="https://wa.me/918099479999"
+                                <a href="https://wa.me/9888067555"
                                     class="btn btn-success"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -1623,7 +1633,7 @@
     <script src="js/app.js"></script>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/918099479999"
+    <a href="https://wa.me/9888067555"
         class="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"

@@ -155,26 +155,47 @@ function initStickyNavbar() {
 }
 
 /*=========================================================
-                ACTIVE NAVIGATION
+                    ACTIVE NAVIGATION
 =========================================================*/
 
 function initActiveNav() {
 
-    const page =
+    // Get only the current file name
+    let currentPage = window.location.pathname
+        .split("/")
+        .pop();
 
-        window.location.pathname
+    // Default homepage
+    if (
+        currentPage === "" ||
+        currentPage === "/" ||
+        currentPage === "index"
+    ) {
 
-            .split("/")
+        currentPage = "index.html";
 
-            .pop() ||
+    }
 
-        "index.html";
+    // Handle Netlify clean URLs
+    if (!currentPage.includes(".")) {
 
-    $$(".navbar .nav-link").forEach(link => {
+        currentPage += ".html";
+
+    }
+
+    // Remove active class from every navigation link
+    document.querySelectorAll(".navbar .nav-link").forEach(link => {
 
         link.classList.remove("active");
 
-        if (link.getAttribute("href") === page) {
+    });
+
+    // Add active class only to current page
+    document.querySelectorAll(".navbar .nav-link").forEach(link => {
+
+        const href = link.getAttribute("href");
+
+        if (href === currentPage) {
 
             link.classList.add("active");
 
@@ -720,19 +741,19 @@ const galleryData = [
     {
         category: "building",
         title: "Exterior View",
-        image: "img/gallery/building/building1.jpg"
+        image: "img/gallery/rooms/room1.jpg"
     },
 
     {
         category: "building",
         title: "Main Entrance",
-        image: "img/gallery/building/building2.jpg"
+        image: "img/gallery/rooms/room2.jpg"
     },
 
     {
         category: "building",
         title: "Front View",
-        image: "img/gallery/building/building3.jpg"
+        image: "img/gallery/rooms/room3.jpg"
     },
 
     /*================ ROOMS ================*/

@@ -1,880 +1,1026 @@
-/*=========================================================
-                    GOOGLE FONTS
-=========================================================*/
+/* =========================================================
+   GOOGLE FONTS
+========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap');
+@import url(
+    'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap'
+);
 
-/*=========================================================
-                    GLOBAL STYLES
-=========================================================*/
 
-body{
+/* =========================================================
+   ROOT / GLOBAL
+========================================================= */
 
-    margin:0;
-    padding:0;
-
-    background:#0d0d0d;
-
-    color:#ffffff;
-
-    font-family:'Poppins',sans-serif;
-
-    overflow-x:hidden;
-
+:root {
+    --primary: #d4af37;
+    --primary-dark: #b88d1e;
+    --black: #0d0d0d;
+    --section-bg: #101010;
+    --card-bg: #171717;
+    --card-header: #1f1f1f;
+    --text: #ffffff;
+    --muted: #bdbdbd;
 }
 
-.menu-section{
 
-    min-height:100vh;
-
-    padding:140px 0 80px;
-
-    background:#101010;
-
-    position:relative;
-
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--black);
+    color: var(--text);
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
 }
 
-.menu-section::before{
 
-    content:"";
+/* =========================================================
+   FOOD MENU SECTION
+   Reduced space below navbar
+========================================================= */
 
-    position:absolute;
+.menu-section {
+    position: relative;
+    min-height: auto;
+    padding: 28px 0 55px;
+    background: var(--section-bg);
+}
 
-    inset:0;
+
+.menu-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
 
     background:
-    radial-gradient(circle at top right,
-    rgba(212,175,55,.08),
-    transparent 35%);
+        radial-gradient(
+            circle at top right,
+            rgba(212, 175, 55, 0.08),
+            transparent 35%
+        );
 
-    pointer-events:none;
-
+    pointer-events: none;
 }
 
-/*=========================================================
-                    HERO CONTENT
-=========================================================*/
 
-.menu-header-content{
-
-    text-align:center;
-
-    margin-bottom:70px;
-
+.menu-section .container {
+    position: relative;
+    z-index: 1;
 }
 
-.menu-subtitle{
 
-    color:var(--primary);
+/* =========================================================
+   MENU HERO / HEADER
+========================================================= */
 
-    text-transform:uppercase;
-
-    letter-spacing:7px;
-
-    font-size:15px;
-
-    font-weight:500;
-
-    margin-bottom:18px;
-
+.menu-header-content {
+    text-align: center;
+    margin-bottom: 22px;
 }
 
-.menu-title{
 
-    font-family:'Cormorant Garamond',serif;
+.menu-subtitle {
+    margin-bottom: 10px;
 
-    font-size:72px;
+    color: var(--primary);
 
-    font-weight:700;
+    font-size: 14px;
+    font-weight: 500;
 
-    color:#ffffff;
-
-    line-height:1.1;
-
-    margin-bottom:20px;
-
+    letter-spacing: 6px;
+    text-transform: uppercase;
 }
 
-.menu-title span{
 
-    color:var(--primary);
+.menu-title {
+    margin: 0 0 10px;
 
-    font-style:italic;
+    color: var(--text);
 
+    font-family: "Cormorant Garamond", serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
 }
 
-.menu-description{
 
-    max-width:700px;
-
-    margin:auto;
-
-    color:#bdbdbd;
-
-    font-size:18px;
-
-    line-height:1.8;
-
+.menu-title span {
+    color: var(--primary);
+    font-style: italic;
 }
 
-/*=========================================================
-                    GOLD DIVIDER
-=========================================================*/
 
-.gold-divider{
+.menu-description {
+    max-width: 700px;
+    margin: 0 auto;
 
-    width:90px;
+    color: var(--muted);
 
-    height:4px;
-
-    margin:28px auto;
-
-    background:var(--primary);
-
-    border-radius:50px;
-
+    font-size: 17px;
+    line-height: 1.7;
 }
 
-/*=========================================================
-                    DAY BUTTONS
-=========================================================*/
 
-.day-tabs{
+.gold-divider {
+    width: 65px;
+    height: 3px;
 
-    display:flex;
+    margin: 16px auto;
 
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:18px;
-
-    margin-top:60px;
-
-    margin-bottom:60px;
-
+    background: var(--primary);
+    border-radius: 50px;
 }
 
-.day-btn{
 
-    background:transparent;
+/* =========================================================
+   DAY TABS
+========================================================= */
 
-    color:var(--primary);
+.day-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
-    border:1px solid rgba(212,175,55,.35);
+    gap: 10px;
 
-    padding:14px 32px;
-
-    border-radius:14px;
-
-    font-size:15px;
-
-    font-weight:600;
-
-    letter-spacing:1px;
-
-    text-transform:uppercase;
-
-    cursor:pointer;
-
-    transition:.35s ease;
-
+    margin: 20px 0 28px;
 }
 
-.day-btn:hover{
 
-    background:var(--primary);
+.day-btn {
+    position: relative;
+    overflow: hidden;
 
-    color:#111;
+    min-width: 120px;
 
-    transform:translateY(-5px);
+    padding: 12px 24px;
 
-    box-shadow:0 15px 30px rgba(212,175,55,.25);
+    background: transparent;
+    color: var(--primary);
 
-}
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 12px;
 
-.day-btn.active{
+    font-size: 13px;
+    font-weight: 600;
 
-    background:var(--primary);
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
 
-    color:#111;
-
-    box-shadow:0 12px 25px rgba(212,175,55,.28);
-
-}
-
-/*=========================================================
-                    MENU CARD
-=========================================================*/
-
-.menu-card{
-
-    background:#171717;
-
-    border:1px solid rgba(212,175,55,.12);
-
-    border-radius:28px;
-
-    overflow:hidden;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.40);
-
-    transition:.35s;
-
-}
-
-.menu-card:hover{
-
-    transform:translateY(-6px);
-
-    box-shadow:0 30px 60px rgba(0,0,0,.45);
-
-}
-
-/*=========================================================
-                    MENU HEADER
-=========================================================*/
-
-.menu-header{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:28px 40px;
-
-    background:#1f1f1f;
-
-    border-bottom:1px solid rgba(212,175,55,.10);
-
-}
-
-.menu-header h2{
-
-    margin:0;
-
-    font-size:46px;
-
-    font-family:'Cormorant Garamond',serif;
-
-    color:#ffffff;
-
-}
-
-.special-day{
-
-    color:var(--primary);
-
-    font-size:18px;
-
-    font-style:italic;
-
-    font-weight:500;
-
-}
-
-/*=========================================================
-                    MEAL ITEMS
-=========================================================*/
-
-.meal-item{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:22px;
-
-    padding:28px 38px;
-
-    border-bottom:1px solid rgba(255,255,255,.06);
-
-    transition:.35s;
-
-}
-
-.meal-item:last-child{
-
-    border-bottom:none;
-
-}
-
-.meal-item:hover{
-
-    background:#202020;
-
-}
-
-.meal-icon{
-
-    width:68px;
-
-    height:68px;
-
-    border-radius:50%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:#252525;
-
-    color:var(--primary);
-
-    font-size:30px;
-
-    flex-shrink:0;
-
-    transition:.35s;
-
-}
-
-.meal-item:hover .meal-icon{
-
-    background:var(--primary);
-
-    color:#111;
-
-    transform:rotate(8deg) scale(1.08);
-
-}
-
-.meal-content{
-
-    flex:1;
-
-}
-
-.meal-type{
-
-    color:var(--primary);
-
-    font-size:13px;
-
-    letter-spacing:4px;
-
-    text-transform:uppercase;
-
-    margin-bottom:8px;
-
-    font-weight:600;
-
-}
-
-.meal-item h5{
-
-    margin:0;
-
-    font-size:20px;
-
-    color:#ffffff;
-
-    line-height:1.8;
-
-    font-weight:500;
-
-}
-
-/*=========================================================
-                    NOTES CARD
-=========================================================*/
-
-.notes-card{
-
-    margin-top:40px;
-
-    background:#171717;
-
-    border:1px solid rgba(212,175,55,.12);
-
-    border-radius:28px;
-
-    overflow:hidden;
-
-    box-shadow:0 20px 45px rgba(0,0,0,.35);
-
-}
-
-.notes-header{
-
-    padding:24px 38px;
-
-    background:#1f1f1f;
-
-    border-bottom:1px solid rgba(212,175,55,.10);
-
-    color:var(--primary);
-
-    font-size:15px;
-
-    font-weight:600;
-
-    letter-spacing:5px;
-
-    text-transform:uppercase;
-
-}
-
-/*=========================================================
-                    NOTES TABLE
-=========================================================*/
-
-.notes-card table{
-
-    width:100%;
-
-    border-collapse:collapse;
-
-}
-
-.notes-card tbody tr{
-
-    border-bottom:1px solid rgba(255,255,255,.06);
-
-    transition:.30s;
-
-}
-
-.notes-card tbody tr:last-child{
-
-    border-bottom:none;
-
-}
-
-.notes-card tbody tr:hover{
-
-    background:#202020;
-
-}
-
-.notes-card th{
-
-    width:220px;
-
-    padding:22px 35px;
-
-    color:var(--primary);
-
-    font-weight:600;
-
-    font-size:18px;
-
-    text-align:left;
-
-}
-
-.notes-card td{
-
-    padding:22px 35px;
-
-    color:#f2f2f2;
-
-    font-size:17px;
-
-    line-height:1.8;
-
-}
-
-/*=========================================================
-                    PREMIUM HOVER EFFECT
-=========================================================*/
-
-.menu-card,
-.notes-card{
-
-    position:relative;
-
-}
-
-.menu-card::before,
-.notes-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    border-radius:28px;
-
-    padding:1px;
-
-    background:linear-gradient(
-        135deg,
-        rgba(212,175,55,.25),
-        transparent,
-        rgba(212,175,55,.15)
-    );
-
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-
-    -webkit-mask-composite:xor;
-    mask-composite:exclude;
-
-    pointer-events:none;
-
-}
-
-/*=========================================================
-                    FADE ANIMATION
-=========================================================*/
-
-.fade-menu{
-
-    animation:fadeMenu .45s ease;
-
-}
-
-@keyframes fadeMenu{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(20px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-
-/*=========================================================
-                IMAGE ANIMATION
-=========================================================*/
-
-.meal-icon{
+    cursor: pointer;
 
     transition:
-        transform .35s ease,
-        background .35s ease,
-        color .35s ease;
+        background 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+.day-btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.15),
+            transparent
+        );
+
+    transition: left 0.55s ease;
+}
+
+
+.day-btn:hover::before {
+    left: 120%;
+}
+
+
+.day-btn:hover {
+    background: var(--primary);
+    color: #111;
+
+    border-color: var(--primary);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(212, 175, 55, 0.2);
+}
+
+
+.day-btn.active {
+    background: var(--primary);
+    color: #111;
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 10px 25px rgba(212, 175, 55, 0.22);
+}
+
+
+/* =========================================================
+   MENU CARD
+========================================================= */
+
+.menu-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--card-bg);
+
+    border: 1px solid rgba(212, 175, 55, 0.12);
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.4);
+
+    transition:
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.menu-card:hover {
+    border-color: rgba(212, 175, 55, 0.25);
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================================
+   MENU CARD HEADER
+========================================================= */
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 24px 32px;
+
+    background: var(--card-header);
+
+    border-bottom:
+        1px solid rgba(212, 175, 55, 0.1);
+}
+
+
+.menu-header h2 {
+    margin: 0;
+
+    color: var(--text);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+
+.special-day {
+    color: var(--primary);
+
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   MEAL ITEMS
+========================================================= */
+
+.meal-item {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 23px 32px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.06);
+
+    transition:
+        background 0.35s ease;
+}
+
+
+.meal-item:last-child {
+    border-bottom: none;
+}
+
+
+.meal-item:hover {
+    background: #202020;
+}
+
+
+.meal-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    width: 58px;
+    height: 58px;
+
+    background: #252525;
+    color: var(--primary);
+
+    border-radius: 50%;
+
+    font-size: 25px;
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        color 0.35s ease;
+}
+
+
+.meal-item:hover .meal-icon {
+    background: var(--primary);
+    color: #111;
+
+    transform:
+        rotate(6deg)
+        scale(1.05);
+}
+
+
+.meal-content {
+    flex: 1;
+    min-width: 0;
+}
+
+
+.meal-type {
+    margin-bottom: 6px;
+
+    color: var(--primary);
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+.meal-item h5 {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   NOTES CARD
+========================================================= */
+
+.notes-card {
+    position: relative;
+
+    overflow: hidden;
+
+    margin-top: 28px;
+
+    background: var(--card-bg);
+
+    border:
+        1px solid rgba(212, 175, 55, 0.12);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.35);
+
+    transition:
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.notes-card:hover {
+    border-color:
+        rgba(212, 175, 55, 0.25);
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.45);
+}
+
+
+.notes-header {
+    padding: 20px 32px;
+
+    background: var(--card-header);
+
+    border-bottom:
+        1px solid rgba(212, 175, 55, 0.1);
+
+    color: var(--primary);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+
+.notes-card table {
+    width: 100%;
+    margin: 0;
+
+    border-collapse: collapse;
+}
+
+
+.notes-card tbody tr {
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.06);
+
+    transition:
+        background 0.3s ease;
+}
+
+
+.notes-card tbody tr:last-child {
+    border-bottom: none;
+}
+
+
+.notes-card tbody tr:hover {
+    background: #202020;
+}
+
+
+.notes-card th {
+    width: 220px;
+
+    padding: 18px 28px;
+
+    color: var(--primary);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    text-align: left;
+    vertical-align: top;
+}
+
+
+.notes-card td {
+    padding: 18px 28px;
+
+    color: #f2f2f2;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   MENU FADE ANIMATION
+========================================================= */
+
+.fade-menu {
+    animation:
+        fadeMenu 0.45s ease;
+}
+
+
+@keyframes fadeMenu {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
 
 }
 
-/*=========================================================
-                SCROLLBAR
-=========================================================*/
 
-::-webkit-scrollbar{
+/* =========================================================
+   SCROLLBAR
+========================================================= */
 
-    width:10px;
-
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-::-webkit-scrollbar-track{
 
-    background:#111;
-
+::-webkit-scrollbar-track {
+    background: #111;
 }
 
-::-webkit-scrollbar-thumb{
 
-    background:var(--primary);
-
-    border-radius:50px;
-
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 50px;
 }
 
-::-webkit-scrollbar-thumb:hover{
 
-    background:#c79c22;
-
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
 }
 
-/*=========================================================
-                TEXT SELECTION
-=========================================================*/
 
-::selection{
+/* =========================================================
+   TEXT SELECTION
+========================================================= */
 
-    background:var(--primary);
-
-    color:#111;
-
+::selection {
+    background: var(--primary);
+    color: #111;
 }
 
-/*=========================================================
-                TABLE HOVER
-=========================================================*/
 
-.notes-card tbody tr{
+/* =========================================================
+   LARGE TABLET
+========================================================= */
 
-    transition:.35s;
+@media (max-width: 1200px) {
 
-}
+    .menu-section {
+        padding: 26px 0 50px;
+    }
 
-.notes-card tbody tr:hover{
-
-    transform:translateX(5px);
-
-}
-
-/*=========================================================
-                DAY BUTTON ANIMATION
-=========================================================*/
-
-.day-btn{
-
-    position:relative;
-
-    overflow:hidden;
-
-}
-
-.day-btn::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    left:-120%;
-
-    width:100%;
-
-    height:100%;
-
-    background:linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.18),
-        transparent
-    );
-
-    transition:.55s;
-
-}
-
-.day-btn:hover::before{
-
-    left:120%;
-
-}
-
-/*=========================================================
-                RESPONSIVE
-=========================================================*/
-
-@media(max-width:1200px){
-
-    .menu-title{
-
-        font-size:60px;
-
+    .menu-title {
+        font-size: 56px;
     }
 
 }
 
-@media(max-width:992px){
 
-    .menu-section{
+/* =========================================================
+   TABLET
+========================================================= */
 
-        padding:130px 0 70px;
+@media (max-width: 992px) {
 
+    .menu-section {
+        padding: 24px 0 45px;
     }
 
-    .menu-title{
-
-        font-size:52px;
-
+    .menu-header-content {
+        margin-bottom: 20px;
     }
 
-    .menu-header{
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
-        gap:10px;
-
+    .menu-title {
+        font-size: 50px;
     }
 
-    .notes-card{
-
-        margin-top:35px;
-
+    .menu-description {
+        font-size: 16px;
     }
 
-}
-
-@media(max-width:768px){
-
-    .menu-title{
-
-        font-size:42px;
-
+    .day-tabs {
+        margin: 18px 0 25px;
     }
 
-    .menu-description{
-
-        font-size:16px;
-
+    .day-btn {
+        min-width: 105px;
+        padding: 11px 20px;
     }
 
-    .day-tabs{
-
-        gap:12px;
-
+    .menu-header {
+        padding: 22px 26px;
     }
 
-    .day-btn{
-
-        width:48%;
-
-        padding:12px;
-
+    .menu-header h2 {
+        font-size: 38px;
     }
 
-    .meal-item{
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
+    .meal-item {
+        padding: 22px 26px;
     }
 
-    .meal-icon{
-
-        margin-bottom:12px;
-
-    }
-
-    .meal-item h5{
-
-        font-size:18px;
-
-    }
-
-    .notes-card th{
-
-        width:150px;
-
-        font-size:15px;
-
+    .notes-card th {
+        width: 180px;
     }
 
 }
 
-@media(max-width:576px){
 
-    .menu-section{
+/* =========================================================
+   MOBILE
+========================================================= */
 
-        padding:120px 0 60px;
+@media (max-width: 768px) {
 
+    /* Reduced gap below mobile navbar */
+
+    .menu-section {
+        min-height: auto;
+        padding: 20px 0 35px;
     }
 
-    .menu-title{
 
-        font-size:34px;
-
+    .menu-header-content {
+        margin-bottom: 18px;
+        padding: 0 12px;
     }
 
-    .menu-subtitle{
 
-        letter-spacing:4px;
+    .menu-subtitle {
+        margin-bottom: 8px;
 
-        font-size:13px;
+        font-size: 10px;
 
+        letter-spacing: 3px;
     }
 
-    .menu-description{
 
-        font-size:15px;
+    .menu-title {
+        margin-bottom: 8px;
 
-        line-height:1.8;
-
+        font-size: 38px;
     }
 
-    .day-btn{
 
-        width:100%;
+    .menu-description {
+        max-width: 500px;
 
+        font-size: 13px;
+        line-height: 1.6;
     }
 
-    .menu-header{
 
-        padding:22px;
+    .gold-divider {
+        width: 50px;
+        height: 3px;
 
+        margin: 12px auto;
     }
 
-    .menu-header h2{
 
-        font-size:34px;
+    /* Day buttons - 4 buttons on top, 3 centered below */
 
+    .day-tabs {
+        display: grid;
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+        gap: 8px;
+        width: 100%;
+        margin: 16px 0 22px;
+        padding: 0 8px;
     }
 
-    .meal-item{
 
-        padding:22px;
-
+    .day-btn {
+        width: 100%;
+        min-width: 0;
+        height: 44px;
+        padding: 0 3px;
+        border-radius: 10px;
+        font-size: 9px;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
     }
 
-    .meal-item h5{
 
-        font-size:17px;
+    /* Top row: Monday, Tuesday, Wednesday, Thursday */
 
-        line-height:1.7;
-
+    .day-btn:nth-child(1) {
+        grid-column: 1 / span 2;
+        grid-row: 1;
     }
+
+
+    .day-btn:nth-child(2) {
+        grid-column: 3 / span 2;
+        grid-row: 1;
+    }
+
+
+    .day-btn:nth-child(3) {
+        grid-column: 5 / span 2;
+        grid-row: 1;
+    }
+
+
+    .day-btn:nth-child(4) {
+        grid-column: 7 / span 2;
+        grid-row: 1;
+    }
+
+
+    /* Bottom row: centered below the gaps between the top buttons */
+
+    .day-btn:nth-child(5) {
+        grid-column: 2 / span 2;
+        grid-row: 2;
+    }
+
+
+    .day-btn:nth-child(6) {
+        grid-column: 4 / span 2;
+        grid-row: 2;
+    }
+
+
+    .day-btn:nth-child(7) {
+        grid-column: 6 / span 2;
+        grid-row: 2;
+    }
+
+
+    /* Menu card */
+
+    .menu-card {
+        margin: 0 8px;
+
+        border-radius: 20px;
+    }
+
+
+    .menu-header {
+        padding: 18px;
+
+        gap: 10px;
+
+        align-items: center;
+    }
+
+
+    .menu-header h2 {
+        font-size: 32px;
+    }
+
+
+    .special-day {
+        font-size: 12px;
+        text-align: right;
+    }
+
+
+    /* Meal items */
+
+    .meal-item {
+        align-items: flex-start;
+
+        gap: 14px;
+
+        padding: 18px;
+    }
+
+
+    .meal-icon {
+        width: 50px;
+        height: 50px;
+
+        font-size: 21px;
+    }
+
+
+    .meal-type {
+        margin-bottom: 4px;
+
+        font-size: 9px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .meal-item h5 {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+
+    /* Notes */
+
+    .notes-card {
+        margin: 24px 8px 0;
+
+        border-radius: 20px;
+    }
+
+
+    .notes-header {
+        padding: 16px 18px;
+
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .notes-card table,
+    .notes-card tbody,
+    .notes-card tr {
+        display: block;
+        width: 100%;
+    }
+
 
     .notes-card th,
-    .notes-card td{
+    .notes-card td {
+        display: block;
 
-        display:block;
+        width: 100%;
 
-        width:100%;
-
-        padding:12px 20px;
-
+        text-align: left;
     }
 
-    .notes-card tr{
 
-        display:block;
+    .notes-card th {
+        padding: 15px 18px 4px;
 
-        padding:10px 0;
+        font-size: 12px;
+    }
 
+
+    .notes-card td {
+        padding: 4px 18px 15px;
+
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    /* Disable unnecessary hover movement on touch devices */
+
+    .menu-card:hover,
+    .notes-card:hover,
+    .day-btn:hover {
+        transform: none;
     }
 
 }
 
-/*=========================================================
-                FINAL POLISH
-=========================================================*/
 
-.menu-card,
-.notes-card{
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
-    transition:
-        transform .35s ease,
-        box-shadow .35s ease,
-        border-color .35s ease;
+@media (max-width: 480px) {
+
+    .menu-section {
+        padding: 18px 0 30px;
+    }
+
+
+    .menu-header-content {
+        margin-bottom: 16px;
+    }
+
+
+    .menu-title {
+        font-size: 34px;
+    }
+
+
+    .menu-description {
+        font-size: 12px;
+    }
+
+
+    .day-tabs {
+        gap: 6px;
+        padding: 0 5px;
+    }
+
+
+    .day-btn {
+        padding: 10px 2px;
+
+        font-size: 8px;
+
+        border-radius: 9px;
+    }
+
+
+    .menu-card {
+        margin: 0 5px;
+    }
+
+
+    .notes-card {
+        margin: 22px 5px 0;
+    }
+
+
+    .menu-header {
+        padding: 16px;
+    }
+
+
+    .menu-header h2 {
+        font-size: 29px;
+    }
+
+
+    .special-day {
+        font-size: 11px;
+    }
+
+
+    .meal-item {
+        gap: 12px;
+
+        padding: 16px;
+    }
+
+
+    .meal-icon {
+        width: 46px;
+        height: 46px;
+
+        font-size: 19px;
+    }
+
+
+    .meal-item h5 {
+        font-size: 13px;
+    }
 
 }
 
-.menu-card:hover,
-.notes-card:hover{
 
-    border-color:rgba(212,175,55,.25);
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
 
-    box-shadow:0 25px 55px rgba(0,0,0,.45);
+@media (max-width: 360px) {
+
+    .menu-section {
+        padding-top: 15px;
+    }
+
+
+    .menu-title {
+        font-size: 31px;
+    }
+
+
+    .menu-subtitle {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .day-tabs {
+        gap: 5px;
+    }
+
+
+    .day-btn {
+        padding: 9px 1px;
+
+        font-size: 7px;
+
+        letter-spacing: 0;
+    }
+
+
+    .menu-header h2 {
+        font-size: 26px;
+    }
+
+
+    .meal-item {
+        gap: 10px;
+
+        padding: 15px 13px;
+    }
+
+
+    .meal-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 17px;
+    }
 
 }
