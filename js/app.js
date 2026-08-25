@@ -160,48 +160,36 @@ function initStickyNavbar() {
 
 function initActiveNav() {
 
-    const navLinks = document.querySelectorAll(
-        ".navbar .nav-link"
-    );
-
-    if (!navLinks.length) return;
-
     let currentPage = window.location.pathname
         .split("/")
         .pop()
         .toLowerCase();
 
-    /* Homepage */
-
+    // Handle Home page
     if (
         currentPage === "" ||
-        currentPage === "index" ||
-        currentPage === "index.html"
+        currentPage === "/" ||
+        currentPage === "index.html" ||
+        currentPage === "index"
     ) {
         currentPage = "index.html";
     }
 
-    /* Netlify clean URLs */
-
-    if (
-        currentPage !== "index.html" &&
-        !currentPage.endsWith(".html")
-    ) {
-        currentPage += ".html";
-    }
+    const navLinks = document.querySelectorAll(".navbar .nav-link");
 
     navLinks.forEach(function (link) {
 
-        const href = link
+        link.classList.remove("active");
+
+        const linkPage = link
             .getAttribute("href")
             .split("/")
             .pop()
             .toLowerCase();
 
-        link.classList.toggle(
-            "active",
-            href === currentPage
-        );
+        if (linkPage === currentPage) {
+            link.classList.add("active");
+        }
 
     });
 
