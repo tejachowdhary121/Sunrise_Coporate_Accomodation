@@ -154,49 +154,46 @@ function initStickyNavbar() {
 
 }
 
-/* =========================================
-   ACTIVE NAVIGATION LINK
-========================================= */
+/*=========================================================
+                    ACTIVE NAVIGATION
+=========================================================*/
 
-document.addEventListener("DOMContentLoaded", function () {
+function initActiveNav() {
+
+    let currentPage = window.location.pathname
+        .split("/")
+        .pop()
+        .toLowerCase();
+
+    // Handle Home page
+    if (
+        currentPage === "" ||
+        currentPage === "/" ||
+        currentPage === "index.html" ||
+        currentPage === "index"
+    ) {
+        currentPage = "index.html";
+    }
 
     const navLinks = document.querySelectorAll(".navbar .nav-link");
 
-    // Remove active class from every link
     navLinks.forEach(function (link) {
+
         link.classList.remove("active");
-    });
 
-    // Get current pathname
-    const currentPath = window.location.pathname.toLowerCase();
+        const linkPage = link
+            .getAttribute("href")
+            .split("/")
+            .pop()
+            .toLowerCase();
 
-    navLinks.forEach(function (link) {
-
-        const href = link.getAttribute("href");
-
-        if (!href) return;
-
-        // HOME PAGE
-        if (
-            (currentPath === "/" ||
-             currentPath === "" ||
-             currentPath === "/index.html") &&
-            href.toLowerCase() === "index.html"
-        ) {
-            link.classList.add("active");
-        }
-
-        // OTHER PAGES
-        else if (
-            currentPath.endsWith("/" + href.toLowerCase()) ||
-            currentPath.endsWith(href.toLowerCase())
-        ) {
+        if (linkPage === currentPage) {
             link.classList.add("active");
         }
 
     });
 
-});
+}
 
 /*=========================================================
                 SCROLL REVEAL
