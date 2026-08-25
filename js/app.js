@@ -167,12 +167,11 @@ function initActiveNav() {
     if (!navLinks.length) return;
 
     let currentPage = window.location.pathname
-        .toLowerCase()
-        .replace(/\/+$/, "")
         .split("/")
-        .pop();
+        .pop()
+        .toLowerCase();
 
-    /* Homepage: https://sunrisewomenspg.netlify.app/ */
+    /* Homepage */
 
     if (
         currentPage === "" ||
@@ -184,26 +183,25 @@ function initActiveNav() {
 
     /* Netlify clean URLs */
 
-    if (!currentPage.includes(".")) {
+    if (
+        currentPage !== "index.html" &&
+        !currentPage.endsWith(".html")
+    ) {
         currentPage += ".html";
     }
 
     navLinks.forEach(function (link) {
 
-        const href = link.getAttribute("href");
-
-        if (!href) return;
-
-        link.classList.remove("active");
-
-        const linkPage = href
+        const href = link
+            .getAttribute("href")
             .split("/")
             .pop()
             .toLowerCase();
 
-        if (linkPage === currentPage) {
-            link.classList.add("active");
-        }
+        link.classList.toggle(
+            "active",
+            href === currentPage
+        );
 
     });
 
