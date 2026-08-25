@@ -160,29 +160,43 @@ function initStickyNavbar() {
 
 function initActiveNav() {
 
-    let currentPage = window.location.pathname
-        .split("/")
-        .pop()
-        .toLowerCase();
+    const navLinks = document.querySelectorAll(
+        ".navbar .nav-link"
+    );
 
-    // Handle Home page
+    if (!navLinks.length) return;
+
+    let currentPage = window.location.pathname
+        .toLowerCase()
+        .replace(/\/+$/, "")
+        .split("/")
+        .pop();
+
+    /* Homepage: https://sunrisewomenspg.netlify.app/ */
+
     if (
         currentPage === "" ||
-        currentPage === "/" ||
-        currentPage === "index.html" ||
-        currentPage === "index"
+        currentPage === "index" ||
+        currentPage === "index.html"
     ) {
         currentPage = "index.html";
     }
 
-    const navLinks = document.querySelectorAll(".navbar .nav-link");
+    /* Netlify clean URLs */
+
+    if (!currentPage.includes(".")) {
+        currentPage += ".html";
+    }
 
     navLinks.forEach(function (link) {
 
+        const href = link.getAttribute("href");
+
+        if (!href) return;
+
         link.classList.remove("active");
 
-        const linkPage = link
-            .getAttribute("href")
+        const linkPage = href
             .split("/")
             .pop()
             .toLowerCase();
