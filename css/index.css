@@ -11,12 +11,22 @@
 }
 
 .hero-section {
+
     min-height:100vh;
+
     display:flex;
+
     align-items:center;
+
     position:relative;
+
     overflow:hidden;
-    background:linear-gradient(rgba(10,10,10,.88),rgba(10,10,10,.88)),url("../img/banner.png") center/cover no-repeat;
+
+    background:
+        url("../img/ChatGPT\ Image\ Sep\ 10\,\ 2026\,\ 08_07_45\ PM.png")
+        center center / cover
+        no-repeat;
+
     padding:100px 0 70px;
 }
 
@@ -122,8 +132,7 @@
 }
 
 .hero-image {
-    display:flex;
-    justify-content:center;
+    display:none;
 }
 
 .glass-card {
@@ -718,6 +727,11 @@ img {
         grid-template-columns:1fr;
         gap:42px;
     }
+    .hero-image {
+        display:flex;
+        justify-content:center;
+        width:100%;
+    }
     .hero-content,.welcome-content,.living-content {
         text-align:center;
     }
@@ -752,9 +766,16 @@ img {
 
 @media(max-width:768px) {
     .hero-section {
-        min-height:0;
-        padding:24px 0 48px;
-        align-items:flex-start;
+        background-image:
+            linear-gradient(rgba(10,10,10,.55), rgba(10,10,10,.55)),
+            url("../img/pg-mobile.png");
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    .hero-section::after {
+        background:rgba(5,5,5,.35);
     }
     .hero-wrapper {
         gap:28px;
@@ -874,7 +895,9 @@ img {
 
 @media(max-width:430px) {
     .hero-section {
-        padding-top:18px;
+        min-height:620px;
+        background-size:auto 100%;
+        background-position:center center;
     }
     .hero-content h1 {
         font-size:34px;

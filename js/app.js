@@ -731,13 +731,13 @@ const galleryData = [
     {
         category: "building",
         title: "Exterior View",
-        image: "img/gallery/rooms/room1.jpg"
+        image: "img/gallery/building/building.png"
     },
 
     {
         category: "building",
         title: "Main Entrance",
-        image: "img/gallery/rooms/room2.jpg"
+        image: "img/gallery/building/gate.jpeg"
     },
 
     {
