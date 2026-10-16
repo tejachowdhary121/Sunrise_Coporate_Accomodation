@@ -751,37 +751,31 @@ const galleryData = [
     {
         category: "rooms",
         title: "Single Sharing",
-        image: "img/gallery/rooms/room1.jpg"
+        image: "img/gallery/rooms/1 sharing.jpeg"
     },
 
     {
         category: "rooms",
         title: "Double Sharing",
-        image: "img/gallery/rooms/room2.jpg"
+        image: "img/gallery/rooms/2 sharing.jpeg"
     },
 
     {
         category: "rooms",
         title: "Triple Sharing",
-        image: "img/gallery/rooms/room3.jpg"
+        image: "img/gallery/rooms/3 sharing.jpeg"
     },
 
     {
         category: "rooms",
-        title: "Premium Room",
-        image: "img/gallery/rooms/room4.jpg"
+        title: "Four Sharing",
+        image: "img/gallery/rooms/4 sharing.jpeg"
     },
 
     {
         category: "rooms",
-        title: "Luxury Room",
-        image: "img/gallery/rooms/room5.jpg"
-    },
-
-    {
-        category: "rooms",
-        title: "Modern Interior",
-        image: "img/gallery/rooms/room6.jpg"
+        title: "Four Sharing",
+        image: "img/gallery/rooms/4 sharing1.jpeg"
     },
 
     /*================ BATHROOMS ================*/

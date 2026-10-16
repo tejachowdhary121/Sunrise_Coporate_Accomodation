@@ -309,7 +309,7 @@
 
 .sharing-image img {
     width:100%;
-    height:260px;
+    height:420px;
     object-fit:cover;
     transition:.5s;
 }
