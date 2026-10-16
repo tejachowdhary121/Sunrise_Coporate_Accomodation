@@ -1857,17 +1857,21 @@ const weeklyMenu = {
 
         breakfast:"Upma / Pongal, Chutney, Tea",
 
-        lunch:"White Rice, Dal, Vegetable Curry, Rasam, Papad, Butter Milk",
+        lunch:"Chicken Dum Biryani, Paneer / Mushroom Biryani",
 
-        dinner:"Chicken Dum Biryani, Paneer Biryani, Raita",
+        dinner:"White Rice, Sambar, Rasam, Papad, Butter Milk",
 
-        rasam:"Pepper Rasam",
+        chicken:"3 Times a Week (Once Chicken Dum Biryani)",
 
-        chutney:"Groundnut Chutney",
+        egg:"Once a Week",
 
-        pickle:"Mango Pickle / Tomato Pickle / Lemon Pickle",
+        fish:"Once a Month",
 
-        special:"Chicken Dum Biryani / Paneer Biryani"
+        buffet:"Once a Month",
+
+        sunday:"Evening Snacks",
+
+        tea:"Every Morning"
 
     },
 
@@ -1881,15 +1885,19 @@ const weeklyMenu = {
 
         lunch:"White Rice, Dal, Vegetable Curry, Rasam, Butter Milk",
 
-        dinner:"Chapati, Chole Curry, White Rice, Sambar, Pakoda",
+        dinner:"Chapathi, Chole Curry, White Rice, Sambar, Pakoda, Butter Milk",
 
-        rasam:"Tomato Rasam",
+        chicken:"3 Times a Week (Once Chicken Dum Biryani)",
 
-        chutney:"Peanut Chutney",
+        egg:"Once a Week",
 
-        pickle:"Mango Pickle / Tomato Pickle / Lemon Pickle",
+        fish:"Once a Month",
 
-        special:"Aloo / Onion Pakoda"
+        buffet:"Once a Month",
+
+        sunday:"Evening Snacks",
+
+        tea:"Every Morning"
 
     },
 
@@ -1901,17 +1909,21 @@ const weeklyMenu = {
 
         breakfast:"Puri, Aloo Curry, Tea",
 
-        lunch:"White Rice, Palak Dal, Vegetable Curry, Rasam",
+        lunch:"White Rice, Palak Dal, Vegetable Curry, Rasam, Butter Milk",
 
-        dinner:"Chapati, Egg Curry, White Rice, Sambar",
+        dinner:"Chapathi, Egg Curry, White Rice, Sambar, Butter Milk",
 
-        rasam:"Garlic Rasam",
+        chicken:"3 Times a Week (Once Chicken Dum Biryani)",
 
-        chutney:"Tamarind Chutney",
+        egg:"Once a Week",
 
-        pickle:"Mango Pickle / Tomato Pickle / Lemon Pickle",
+        fish:"Once a Month",
 
-        special:"Egg Curry"
+        buffet:"Once a Month",
+
+        sunday:"Evening Snacks",
+
+        tea:"Every Morning"
 
     },
 
@@ -1921,19 +1933,23 @@ const weeklyMenu = {
 
         specialDay:"🍗 Chicken / Paneer",
 
-        breakfast:"Utappam, Dosa, Tea",
+        breakfast:"Utappam, Chutney, Tea",
 
-        lunch:"Jeera Rice, Dal Tadka, Butter Milk",
+        lunch:"Jeera Rice / Tomato Rice, Dal Tadka, Butter Milk",
 
-        dinner:"Chapati, Chicken Curry, Paneer Curry",
+        dinner:"Chapathi, Chicken Curry, Paneer Curry, White Rice, Butter Milk",
 
-        rasam:"Tomato Rasam",
+        chicken:"3 Times a Week (Once Chicken Dum Biryani)",
 
-        chutney:"Peanut Chutney",
+        egg:"Once a Week",
 
-        pickle:"Mango Pickle / Tomato Pickle / Lemon Pickle",
+        fish:"Once a Month",
 
-        special:"Chicken Curry"
+        buffet:"Once a Month",
+
+        sunday:"Evening Snacks",
+
+        tea:"Every Morning"
 
     },
 
@@ -1943,19 +1959,23 @@ const weeklyMenu = {
 
         specialDay:"🥘 Variety Chapati",
 
-        breakfast:"Methi Chapati",
+        breakfast:"Methi Chapathi, Chutney, Tea",
 
-        lunch:"White Rice, Dal, Fry",
+        lunch:"White Rice, Dal, Fry, Rasam, Butter Milk",
 
-        dinner:"Chapati, Chenna Curry",
+        dinner:"Chapathi, Chenna Curry, White Rice, Sambar, Butter Milk",
 
-        rasam:"Pepper Rasam",
+        chicken:"3 Times a Week (Once Chicken Dum Biryani)",
 
-        chutney:"Mint Chutney",
+        egg:"Once a Week",
 
-        pickle:"Mango Pickle",
+        fish:"Once a Month",
 
-        special:"Ladies Finger Fry"
+        buffet:"Once a Month",
+
+        sunday:"Evening Snacks",
+
+        tea:"Every Morning"
 
     },
 
@@ -1965,19 +1985,23 @@ const weeklyMenu = {
 
         specialDay:"🍗 Chicken Dinner",
 
-        breakfast:"Punugulu / Mysore Bajji",
+        breakfast:"Punugulu / Mysore Bajji, Chutney, Tea",
 
-        lunch:"White Rice, Tomato Dal",
+        lunch:"White Rice, Tomato Dal, Rasam, Butter Milk",
 
-        dinner:"Chapati, Chicken Curry",
+        dinner:"Chapathi, Chicken Curry, Paneer Curry, White Rice, Butter Milk",
 
-        rasam:"Tomato Rasam",
+        chicken:"3 Times a Week (Once Chicken Dum Biryani)",
 
-        chutney:"Groundnut Chutney",
+        egg:"Once a Week",
 
-        pickle:"Mixed Pickle",
+        fish:"Once a Month",
 
-        special:"Chicken Curry"
+        buffet:"Once a Month",
+
+        sunday:"Evening Snacks",
+
+        tea:"Every Morning"
 
     },
 
@@ -1987,19 +2011,23 @@ const weeklyMenu = {
 
         specialDay:"🍲 Weekend Special",
 
-        breakfast:"Poha, Lemon Rice",
+        breakfast:"Poha, Lemon Rice, Tea",
 
-        lunch:"Vegetable Pulav",
+        lunch:"Vegetable Pulav, Raitha, Vegetable Kurma",
 
-        dinner:"Dosa / Chole Bhature",
+        dinner:"Sweet, Curd Rice, Dosa / Idly, Vada / Parota / Chole Bhature",
 
-        rasam:"Tomato Rasam",
+        chicken:"3 Times a Week (Once Chicken Dum Biryani)",
 
-        chutney:"Groundnut Chutney",
+        egg:"Once a Week",
 
-        pickle:"Mixed Pickle",
+        fish:"Once a Month",
 
-        special:"Sweet"
+        buffet:"Once a Month",
+
+        sunday:"Evening Snacks",
+
+        tea:"Every Morning"
 
     }
 
@@ -2027,13 +2055,17 @@ function updateMenu(day){
 
         dinner:menu.dinner,
 
-        rasam:menu.rasam,
+        chicken:menu.chicken,
 
-        chutney:menu.chutney,
+        egg:menu.egg,
 
-        pickle:menu.pickle,
+        fish:menu.fish,
 
-        special:menu.special
+        buffet:menu.buffet,
+
+        sunday:menu.sunday,
+
+        tea:menu.tea
 
     };
 
