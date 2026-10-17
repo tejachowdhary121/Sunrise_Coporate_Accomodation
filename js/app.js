@@ -743,7 +743,7 @@ const galleryData = [
     {
         category: "building",
         title: "Front View",
-        image: "img/gallery/rooms/room3.jpg"
+        image: "img/gallery/building/"
     },
 
     /*================ ROOMS ================*/
@@ -838,14 +838,56 @@ const galleryData = [
 
     {
         category: "nearby",
-        title: "IT Park",
-        image: "img/gallery/nearby/itpark.jpg"
+        title: "US Consulate",
+        image: "img/gallery/nearby/US Consulate.jpg"
     },
 
     {
         category: "nearby",
-        title: "Metro",
-        image: "img/gallery/nearby/metro.jpg"
+        title: "The Square 110",
+        image: "img/gallery/nearby/The Square 110.jpg"
+    },
+
+    {
+        category: "nearby",
+        title: "Broadcom",
+        image: "img/gallery/nearby/Broadcom.jpg"
+    },
+
+    {
+        category: "nearby",
+        title: "Wipro",
+        image: "img/gallery/nearby/Wipro.jpg"
+    },
+
+    {
+        category: "nearby",
+        title: "Value Momentum",
+        image: "img/gallery/nearby/Value Momentum.jpg"
+    },
+
+    {
+        category: "nearby",
+        title: "ICICI Bank",
+        image: "img/gallery/nearby/ICICI Bank.jpeg"
+    },
+
+    {
+        category: "nearby",
+        title: "IIRM",
+        image: "img/gallery/nearby/IIRM.jpg"
+    },
+
+    {
+        category: "nearby",
+        title: "Microsoft",
+        image: "img/gallery/nearby/Microsoft.jpg"
+    },
+
+    {
+        category: "nearby",
+        title: "IIRM",
+        image: "img/gallery/nearby/IIRM.jpg"
     }
 
 ];
