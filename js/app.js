@@ -449,7 +449,7 @@ const roomData = {
 
         title: "Two Sharing",
 
-        price: "₹12,000",
+        price: "₹12,500",
 
         description:
             "Premium two-sharing accommodation ideal for working professionals.",
@@ -473,7 +473,7 @@ const roomData = {
 
         title: "Single Sharing",
 
-        price: "₹22,000",
+        price: "₹24,000",
 
         description:
             "Luxury private room offering complete privacy and premium comfort.",
