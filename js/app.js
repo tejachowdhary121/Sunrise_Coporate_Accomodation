@@ -483,7 +483,7 @@ const roomData = {
             ["img/assets/single.png", "1 Guest"],
             ["img/assets/queenbed.png", "Queen Bed"],
             ["img/assets/wifi.png", "High-Speed WiFi"],
-            ["img/assets/wardrobe.png", "3 Wardrobes"],
+            ["img/assets/wardrobe.png", "1 Wardrobes"],
             ["img/assets/geyser.png", "Geyser"],
             ["img/assets/bathroom.png", "Bathroom"],
             ["img/assets/shoerack.png", "Shoe Rack"],
