@@ -124,7 +124,7 @@ p{
         rgba(9,9,9,.78),
         rgba(9,9,9,.88)
     ),
-    url("../img/image.jpeg");
+    url("../img/gallery/common areas/Reception.jpeg") no-repeat;
 
     background-size:cover;
 
@@ -276,7 +276,7 @@ p{
 
     display:inline-block;
 
-    padding:18px;
+    padding:20px;
 
     border-radius:35px;
 

@@ -740,12 +740,6 @@ const galleryData = [
         image: "img/gallery/building/gate.jpeg"
     },
 
-    {
-        category: "building",
-        title: "Front View",
-        image: "img/gallery/building/"
-    },
-
     /*================ ROOMS ================*/
 
     {
@@ -778,32 +772,32 @@ const galleryData = [
         image: "img/gallery/rooms/4 sharing1.jpeg"
     },
 
-    /*================ BATHROOMS ================*/
-
-    {
-        category: "bathrooms",
-        title: "Bathroom",
-        image: "img/gallery/bathrooms/bath1.jpg"
-    },
-
-    {
-        category: "bathrooms",
-        title: "Premium Bathroom",
-        image: "img/gallery/bathrooms/bath2.jpg"
-    },
-
     /*================ DINING ================*/
 
     {
         category: "dining",
         title: "Dining Hall",
-        image: "img/gallery/dining/dining1.jpg"
+        image: "img/gallery/dining/Dining.jpeg"
     },
 
     {
         category: "dining",
-        title: "Buffet Area",
-        image: "img/gallery/dining/dining2.jpg"
+        title: "Dining Area",
+        image: "img/gallery/dining/Dining1.jpeg"
+    },
+
+    /*================ BATHROOMS ================*/
+
+    {
+        category: "bathrooms",
+        title: "Bathroom",
+        image: "img/gallery/bathrooms/Bathroom.jpeg"
+    },
+
+    {
+        category: "bathrooms",
+        title: "Geyser",
+        image: "img/gallery/bathrooms/Geyser.jpeg"
     },
 
     /*================ COMMON AREAS ================*/
@@ -811,27 +805,57 @@ const galleryData = [
     {
         category: "common",
         title: "Lounge",
-        image: "img/gallery/lounge/lounge1.jpg"
+        image: "img/gallery/common areas/Reception.jpeg"
+    },
+
+    {
+        category: "common",
+        title: "Corridor",
+        image: "img/gallery/common areas/Corridor.jpeg"
     },
 
     {
         category: "common",
         title: "TV Area",
-        image: "img/gallery/lounge/lounge2.jpg"
+        image: "img/gallery/common areas/TV.jpeg"
+    },
+
+    {
+        category: "common",
+        title: "Dining Area",
+        image: "img/gallery/common areas/Dining.jpeg"
     },
 
     /*================ AMENITIES ================*/
 
     {
         category: "amenities",
-        title: "Laundry",
-        image: "img/gallery/amenities/laundry.jpg"
+        title: "Fridge & Dispenser",
+        image: "img/gallery/amenities/Fridge & Dispenser.jpeg"
     },
 
     {
         category: "amenities",
-        title: "High Speed WiFi",
-        image: "img/gallery/amenities/wifi.jpg"
+        title: "Television",
+        image: "img/gallery/amenities/TV.jpeg"
+    },
+
+    {
+        category: "amenities",
+        title: "Washing Machines",
+        image: "img/gallery/amenities/Washing Machine.jpeg"
+    },
+
+    {
+        category: "amenities",
+        title: "Power Backup",
+        image: "img/gallery/amenities/Generator.jpeg"
+    },
+
+    {
+        category: "amenities",
+        title: "Power Backup",
+        image: "img/gallery/amenities/WiFi.jpeg"
     },
 
     /*================ NEARBY ================*/
@@ -882,12 +906,6 @@ const galleryData = [
         category: "nearby",
         title: "Microsoft",
         image: "img/gallery/nearby/Microsoft.jpg"
-    },
-
-    {
-        category: "nearby",
-        title: "IIRM",
-        image: "img/gallery/nearby/IIRM.jpg"
     }
 
 ];
