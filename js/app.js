@@ -854,7 +854,7 @@ const galleryData = [
 
     {
         category: "amenities",
-        title: "Power Backup",
+        title: "WiFi",
         image: "img/gallery/amenities/WiFi.jpeg"
     },
 
