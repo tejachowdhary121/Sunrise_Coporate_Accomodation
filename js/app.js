@@ -826,6 +826,12 @@ const galleryData = [
         image: "img/gallery/common areas/Dining.jpeg"
     },
 
+    {
+        category: "common",
+        title: "Lightning Board",
+        image: "img/gallery/common areas/Lightning Board.jpeg"
+    },
+
     /*================ AMENITIES ================*/
 
     {
@@ -848,6 +854,12 @@ const galleryData = [
 
     {
         category: "amenities",
+        title: "Self Cooking",
+        image: "img/gallery/amenities/Self Cooking.jpeg"
+    },
+
+    {
+        category: "amenities",
         title: "Power Backup",
         image: "img/gallery/amenities/Generator.jpeg"
     },
@@ -856,6 +868,12 @@ const galleryData = [
         category: "amenities",
         title: "WiFi",
         image: "img/gallery/amenities/WiFi.jpeg"
+    },
+
+    {
+        category: "amenities",
+        title: "Fire Safety",
+        image: "img/gallery/amenities/Fire Safety.jpeg"
     },
 
     /*================ NEARBY ================*/
