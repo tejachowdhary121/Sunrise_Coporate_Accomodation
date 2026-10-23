@@ -772,20 +772,6 @@ const galleryData = [
         image: "img/gallery/rooms/4 sharing1.jpeg"
     },
 
-    /*================ DINING ================*/
-
-    {
-        category: "dining",
-        title: "Dining Hall",
-        image: "img/gallery/dining/Dining.jpeg"
-    },
-
-    {
-        category: "dining",
-        title: "Dining Area",
-        image: "img/gallery/dining/Dining1.jpeg"
-    },
-
     /*================ BATHROOMS ================*/
 
     {
@@ -830,6 +816,20 @@ const galleryData = [
         category: "common",
         title: "Lightning Board",
         image: "img/gallery/common areas/Lightning Board.jpeg"
+    },
+
+    /*================ DINING ================*/
+
+    {
+        category: "dining",
+        title: "Dining Hall",
+        image: "img/gallery/dining/Dining.jpeg"
+    },
+
+    {
+        category: "dining",
+        title: "Dining Area",
+        image: "img/gallery/dining/Dining1.jpeg"
     },
 
     /*================ AMENITIES ================*/
